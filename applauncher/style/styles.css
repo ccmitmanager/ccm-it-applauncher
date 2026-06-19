@@ -26,7 +26,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: url('background.svg') center / cover fixed, #5d87c2;
+  background: url('./background.svg') center / cover fixed, #5d87c2;
   color: #333;
 }
 
@@ -314,6 +314,7 @@ body {
 .g-icon img {
   width: 100%;
   height: 100%;
+  padding: 12.5%;
   object-fit: contain;
   display: block;
 }

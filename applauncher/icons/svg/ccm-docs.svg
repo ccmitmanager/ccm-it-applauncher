@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" height="256" width="256">
+  <desc>
+    Manual Book Streamline Icon: https://streamlinehq.com
+  </desc>
+  <path fill="url(#a)" fill-rule="evenodd" d="M2.75 0A1.75 1.75 0 0 0 1 1.75v9.875A2.375 2.375 0 0 0 3.375 14h8.875a.75.75 0 1 0 0-1.5h-.5v-1.77A1.5 1.5 0 0 0 13 9.25V1.5A1.5 1.5 0 0 0 11.5 0zm7.5 12.5H3.375a.875.875 0 1 1 0-1.75h6.875zM6.665 2.879A.875.875 0 1 1 7 4.562a.625.625 0 0 0-.625.625v.5a.625.625 0 0 0 1.25.031 2.125 2.125 0 1 0-2.75-2.031.625.625 0 1 0 1.25 0 .875.875 0 0 1 .54-.808M7 8.884a.875.875 0 1 1 0-1.75.875.875 0 0 1 0 1.75" clip-rule="evenodd"/>
+  <defs>
+    <linearGradient id="a" x1="7" x2="7" y1="0" y2="14" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00d078"/>
+      <stop offset="1" stop-color="#007df0"/>
+    </linearGradient>
+  </defs>
+</svg>
