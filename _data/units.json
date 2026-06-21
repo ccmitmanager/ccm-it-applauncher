@@ -1,0 +1,155 @@
+[
+  {
+    "code": "BCCC",
+    "name": "Blakes Crossing Christian College",
+    "shortName": "Blakes",
+    "accent": "#313855",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "BRICC",
+    "name": "Brindabella Christian College",
+    "shortName": "Brindabella",
+    "accent": "#00205b",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "CHICC",
+    "name": "Chinchilla Christian College",
+    "shortName": "Chinchilla",
+    "accent": "#000d3a",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "CORCC",
+    "name": "Cornerstone Christian College",
+    "shortName": "Cornerstone",
+    "accent": "#db1a21",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "DALCC",
+    "name": "Dalby Christian College",
+    "shortName": "Dalby",
+    "accent": "#01aced",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "DUNCC",
+    "name": "Dunsborough Christian College",
+    "shortName": "Dunsborough",
+    "accent": "#324158",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "ENDCC",
+    "name": "Endeavour Christian College",
+    "shortName": "Endeavour",
+    "accent": "#002e5e",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "GROCC",
+    "name": "Groves Christian College",
+    "shortName": "Groves",
+    "accent": "#a41d37",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "HOPCC",
+    "name": "Hope Christian College",
+    "shortName": "Hope",
+    "accent": "#10a4a1",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "LIVCC",
+    "name": "Livingstone Christian College",
+    "shortName": "Livingstone",
+    "accent": "#b65429",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "RIVCC",
+    "name": "Rivers Christian College",
+    "shortName": "Rivers",
+    "accent": "#03b9ef",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "SEACC",
+    "name": "Seaview Christian College",
+    "shortName": "Seaview",
+    "accent": "#00093c",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "STAMC",
+    "name": "Staines Methodist College",
+    "shortName": "Staines",
+    "accent": "#4e5b31",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "TLCC",
+    "name": "The Lakes Christian College",
+    "shortName": "The Lakes",
+    "accent": "#900a06",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "WARCC",
+    "name": "Warwick Christian College",
+    "shortName": "Warwick",
+    "accent": "#0a123a",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "WHICC",
+    "name": "Whitsunday Christian College",
+    "shortName": "Whitsunday",
+    "accent": "#0972ce",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["school"]
+  },
+  {
+    "code": "CCMIT",
+    "name": "CCM IT Services",
+    "shortName": "CCM IT",
+    "accent": "#22325d",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["ccm-internal"]
+  }
+]

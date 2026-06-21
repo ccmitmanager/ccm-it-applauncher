@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCM IT Services – Staff Apps</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../style/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../style/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../style/favicon-16x16.png">
+  <link rel="manifest" href="../style/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/styles.css">
+  <style>:root { --accent: #22325d; }</style>
+</head>
+
+<body>
+
+  <nav class="topbar" aria-label="Main navigation">
+
+    <button class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false"
+      aria-controls="topbar-nav">&#9776; Menu</button>
+
+    <div class="topbar-nav" id="topbar-nav">
+
+      <a href="https://ccmschools.app/go/" class="tb-link">College Apps</a>
+
+      <a href="/CCMIT/" class="tb-link active">CCM IT Staff Apps</a>
+      
+      <div class="dd">
+        <button class="dd-btn" aria-haspopup="true" aria-expanded="false">
+          System Administration <span class="dd-caret"></span>
+        </button>
+        <div class="dd-menu">
+          <a href="https://ccmschools.app/go/testenv/">Test Environments</a>
+          <a href="https://admin.parentidpassport.com/PIPSPlus-Admin/">PIPSPlus Admin</a>
+          <a href="https://ccm.busminder.com.au/admin/">BusMinder Administration</a>
+          <a href="https://cmd.ms">Microsoft Admin Portals</a>
+        </div>
+      </div>
+
+      <div class="dd">
+        <button class="dd-btn" aria-haspopup="true" aria-expanded="false">
+          The Source <span class="dd-caret"></span>
+        </button>
+        <div class="dd-menu">
+          <a href="https://ccmschools.sharepoint.com/sites/ccm-policy">Policy &amp; Procedure Portal</a>
+          <a href="https://ccmschools.sharepoint.com/sites/TeachingLearning">Teaching &amp; Learning Portal</a>
+          <a href="https://ccmschools.sharepoint.com/sites/ccm-hrp">HR &amp; Payroll Portal</a>
+          <a href="https://ccmschools.sharepoint.com/sites/ccm-policy/leaders/">School Leaders Guide</a>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="logo-wrap">
+    <img src="../style/ccm-logo.png" alt="CCM IT Services">
+  </div>
+
+  <div class="filter-row" role="tablist" aria-label="Content category">
+    <button class="f-btn active" role="tab" aria-selected="true" data-target="grid-ms-portals">Microsoft Portals</button>
+    <button class="f-btn" role="tab" aria-selected="false" data-target="grid-ccm-t1-services">Tier 1 Services</button>
+    <button class="f-btn" role="tab" aria-selected="false" data-target="grid-ccm-t2-services">Tier 2 Services</button>
+    <button class="f-btn" role="tab" aria-selected="false" data-target="grid-other">Other</button>
+  </div>
+
+  <main class="grid-wrap">
+    <div class="grid active" id="grid-ms-portals" role="tabpanel">
+      <a href="https://ge.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/10318-icon-service-Resource-Graph-Explorer.svg" alt="Graph Explorer"></div>
+        <div class="g-label">Graph Explorer</div>
+      </a>
+      <a href="https://in.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/microsoftIntune.svg" alt="Intune"></div>
+        <div class="g-label">Intune</div>
+      </a>
+      <a href="https://enlaps.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/microsoftIntuneLaps.svg" alt="LAPS"></div>
+        <div class="g-label">LAPS</div>
+      </a>
+      <a href="https://admin.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/ic_fluent_admincenter_24_color.svg" alt="Microsoft 365 Admin Centre"></div>
+        <div class="g-label">Microsoft 365 Admin Centre</div>
+      </a>
+      <a href="https://en.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/entra.svg" alt="Microsoft Entra"></div>
+        <div class="g-label">Microsoft Entra</div>
+      </a>
+      <a href="https://pu.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/purview.svg" alt="Microsoft Purview"></div>
+        <div class="g-label">Microsoft Purview</div>
+      </a>
+      <a href="https://mymfa.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/microsoftAuthenticatorMfa.svg" alt="My MFA"></div>
+        <div class="g-label">My MFA</div>
+      </a>
+      <a href="https://m365apps.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/office.svg" alt="Office 365 Admin Centre"></div>
+        <div class="g-label">Office 365 Admin Centre</div>
+      </a>
+      <a href="https://enpimr.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/privilegedIdentityManagement.svg" alt="Privileged Identity Management"></div>
+        <div class="g-label">Privileged Identity Management</div>
+      </a>
+      <a href="https://deqre.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/ic_fluent_mail_48_color.svg" alt="Quarantined Emails"></div>
+        <div class="g-label">Quarantined Emails</div>
+      </a>
+      <a href="https://teams.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/teams.svg" alt="Teams Admin"></div>
+        <div class="g-label">Teams Admin</div>
+      </a>
+      <a href="https://macvlsc.cmd.ms" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/ic_fluent_puzzle_piece_48_color.svg" alt="VLSC"></div>
+        <div class="g-label">VLSC</div>
+      </a>
+    </div>
+
+    <div class="grid" id="grid-ccm-t1-services" role="tabpanel">
+      <a href="https://saml-in4.clickview.com.au/Shibboleth.sso/ADM1069839" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/clickview.svg" alt="ClickView Video Library"></div>
+        <div class="g-label">ClickView Video Library</div>
+      </a>
+      <a href="https://app.codetwo.com/" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/codetwo.svg" alt="CodeTwo Email Signatures Management"></div>
+        <div class="g-label">CodeTwo Email Signatures Management</div>
+      </a>
+      <a href="https://docs.ccmschools.app/" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/svg/ic_fluent_book_48_color.svg" alt="Corporate Systems Documentation"></div>
+        <div class="g-label">Corporate Systems Documentation</div>
+      </a>
+      <a href="https://www.edval.education/" class="g-item">
+        <div class="g-icon" style="background-color:#f4f4f4"><img src="../icons/webp/edval.webp" alt="Edval Timetabler"></div>
+        <div class="g-label">Edval Timetabler</div>
+      </a>
+      <a href="https://app.itcthinkdrive.com.au/login" class="g-item">
+        <div class="g-icon" style="background-color:#f4f4f4"><img src="../icons/webp/itcthinkdrive.webp" alt="ITC ThinkDrive"></div>
+        <div class="g-label">ITC ThinkDrive</div>
+      </a>
+      <a href="https://learnerlink.instructure.com/accounts/1?" class="g-item">
+        <div class="g-icon" style="background-color:#2c497e"><img src="../icons/svg/learner-link-trimmed.svg" alt="Learner.Link Admin"></div>
+        <div class="g-label">Learner.Link Admin</div>
+      </a>
+      <a href="https://portal.owna.com.au/" class="g-item">
+        <div class="g-icon" style="background-color:#d3ece8"><img src="../icons/svg/owna.svg" alt="OWNA Portal"></div>
+        <div class="g-label">OWNA Portal</div>
+      </a>
+    </div>
+
+    <div class="grid" id="grid-ccm-t2-services" role="tabpanel">
+      <a href="https://user.codetwo.com/" class="g-item">
+        <div class="g-icon"><img data-icon="#22325d:CodeTwo" alt="CodeTwo Email Signature – My User Info"></div>
+        <div class="g-label">CodeTwo Email Signature – My User Info</div>
+      </a>
+      <a href="https://docs.ccmschools.app/" class="g-item">
+        <div class="g-icon"><img data-icon="#22325d:Docs" alt="Corporate Systems Documentation"></div>
+        <div class="g-label">Corporate Systems Documentation</div>
+      </a>
+      <a href="http://learnerlink.instructure.com/login/saml" class="g-item">
+        <div class="g-icon"><img data-icon="#22325d:LL" alt="Learner.Link (Staff &amp; Students)"></div>
+        <div class="g-label">Learner.Link (Staff &amp; Students)</div>
+      </a>
+      <a href="https://mysignins.microsoft.com/security-info" class="g-item">
+        <div class="g-icon"><img data-icon="#22325d:MFA" alt="Manage Multifactor Authentication"></div>
+        <div class="g-label">Manage Multifactor Authentication</div>
+      </a>
+    </div>
+
+    <div class="grid" id="grid-other" role="tabpanel">
+      <a href="https://www.bpoint.com.au/backoffice/" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/Credit-Card.webp" alt="BPOINT BackOffice"></div>
+        <div class="g-label">BPOINT BackOffice</div>
+      </a>
+      <a href="https://ccm.busminder.com.au/school/" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/BusMinder.webp" alt="BusMinder"></div>
+        <div class="g-label">BusMinder</div>
+      </a>
+      <a href="https://app.codetwo.com/" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/CodeTwo.webp" alt="CodeTwo Email Signatures Management"></div>
+        <div class="g-label">CodeTwo Email Signatures Management</div>
+      </a>
+      <a href="http://www.commbiz.com.au/" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/CommBiz.webp" alt="CommBiz Banking"></div>
+        <div class="g-label">CommBiz Banking</div>
+      </a>
+      <a href="https://ccmschools.app/go/edval" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/Edval-1.webp" alt="EdVal"></div>
+        <div class="g-label">EdVal</div>
+      </a>
+      <a href="https://ccmschools.app/go/enrolhq/" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/EnrolHQ-1.webp" alt="Enrol HQ"></div>
+        <div class="g-label">Enrol HQ</div>
+      </a>
+      <a href="https://bcc.factsmgt.com.au/" class="g-item">
+        <div class="g-icon" style="background-color:honeydew"><img src="../icons/Logo-Facts.webp" alt="FACTS (BCC)"></div>
+        <div class="g-label">FACTS (BCC)</div>
+      </a>
+      <a href="https://ccmschools.app/go/lightspeed" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/Lightspeed.webp" alt="Lightspeed POS"></div>
+        <div class="g-label">Lightspeed POS</div>
+      </a>
+      <a href="https://portal.owna.com.au/login.aspx" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/Owna.webp" alt="OWNA Childcare Management"></div>
+        <div class="g-label">OWNA Childcare Management</div>
+      </a>
+      <a href="https://hopecc.factsmgt.com.au/Pages/Login.aspx" class="g-item">
+        <div class="g-icon" style="background-color:#22325d"><img src="../icons/PCSchool.webp" alt="Spider (HCC)"></div>
+        <div class="g-label">Spider (HCC)</div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>A ministry of <a href="https://www.ccmschools.edu.au">Christian Community Ministries</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var dds          = document.querySelectorAll('.dd');
+      var topbar       = document.querySelector('.topbar');
+      var hamburgerBtn = document.querySelector('.hamburger-btn');
+      var topbarNav    = document.getElementById('topbar-nav');
+
+      function closeAllNav() {
+        dds.forEach(function (d) {
+          d.classList.remove('open');
+          d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
+        });
+        topbar.classList.remove('nav-open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      dds.forEach(function (dd) {
+        var btn = dd.querySelector('.dd-btn');
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var opening = !dd.classList.contains('open');
+          dds.forEach(function (d) {
+            d.classList.remove('open');
+            d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
+          });
+          if (opening) {
+            dd.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      document.addEventListener('click', closeAllNav);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { closeAllNav(); }
+      });
+
+      hamburgerBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var opening = !topbar.classList.contains('nav-open');
+        topbar.classList.toggle('nav-open', opening);
+        hamburgerBtn.setAttribute('aria-expanded', opening ? 'true' : 'false');
+        if (!opening) {
+          dds.forEach(function (d) {
+            d.classList.remove('open');
+            d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+
+      topbarNav.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+
+      var fBtns = document.querySelectorAll('.f-btn');
+      var grids = document.querySelectorAll('.grid');
+
+      fBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          fBtns.forEach(function (b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          grids.forEach(function (g) { g.classList.remove('active'); });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          var target = document.getElementById(btn.dataset.target);
+          if (target) { target.classList.add('active'); }
+        });
+      });
+
+      document.querySelectorAll('img[data-icon]').forEach(function (img) {
+        var raw   = img.getAttribute('data-icon');
+        var colon = raw.indexOf(':');
+        var color = raw.slice(0, colon);
+        var label = raw.slice(colon + 1);
+        var fs    = label.length > 3 ? 16 : label.length > 2 ? 20 : 26;
+        var svg =
+          "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'>" +
+          "<rect width='80' height='80' fill='" + color + "'/>" +
+          "<text x='40' y='40' font-size='" + fs + "'" +
+          " text-anchor='middle' dominant-baseline='middle'" +
+          " fill='white' font-family='sans-serif' font-weight='400'>" +
+          label +
+          "</text></svg>";
+        img.src = 'data:image/svg+xml,' + encodeURIComponent(svg);
+      });
+
+    })();
+  </script>
+
+</body>
+
+</html>

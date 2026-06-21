@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whitsunday Christian College – Staff Apps</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../style/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../style/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../style/favicon-16x16.png">
+  <link rel="manifest" href="../style/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/styles.css">
+  <style>:root { --accent: #0972ce; }</style>
+</head>
+
+<body>
+
+  <nav class="topbar" aria-label="Main navigation">
+
+    <button class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false"
+      aria-controls="topbar-nav">&#9776; Menu</button>
+
+    <div class="topbar-nav" id="topbar-nav">
+
+      <a href="https://ccmschools.app/go/" class="tb-link">College Apps</a>
+
+      <a href="/WHICC/" class="tb-link active">Whitsunday Staff Apps</a>
+      
+      <div class="dd">
+        <button class="dd-btn" aria-haspopup="true" aria-expanded="false">
+          System Administration <span class="dd-caret"></span>
+        </button>
+        <div class="dd-menu">
+          <a href="https://ccmschools.app/go/testenv/">Test Environments</a>
+          <a href="https://admin.parentidpassport.com/PIPSPlus-Admin/">PIPSPlus Admin</a>
+          <a href="https://ccm.busminder.com.au/admin/">BusMinder Administration</a>
+          <a href="https://cmd.ms">Microsoft Admin Portals</a>
+        </div>
+      </div>
+
+      <div class="dd">
+        <button class="dd-btn" aria-haspopup="true" aria-expanded="false">
+          The Source <span class="dd-caret"></span>
+        </button>
+        <div class="dd-menu">
+          <a href="https://ccmschools.sharepoint.com/sites/ccm-policy">Policy &amp; Procedure Portal</a>
+          <a href="https://ccmschools.sharepoint.com/sites/TeachingLearning">Teaching &amp; Learning Portal</a>
+          <a href="https://ccmschools.sharepoint.com/sites/ccm-hrp">HR &amp; Payroll Portal</a>
+          <a href="https://ccmschools.sharepoint.com/sites/ccm-policy/leaders/">School Leaders Guide</a>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="logo-wrap">
+    <img src="../style/ccm-logo.png" alt="Whitsunday Christian College">
+  </div>
+
+  <div class="filter-row" role="tablist" aria-label="Content category">
+    <button class="f-btn active" role="tab" aria-selected="true" data-target="grid-students">Students</button>
+  </div>
+
+  <main class="grid-wrap">
+    <div class="grid active" id="grid-students" role="tabpanel">
+      <a href="https://blakescrossing-college.boxofbooks.io/" class="g-item">
+        <div class="g-icon"><img data-icon="#0972ce:BoB" alt="Box of Books"></div>
+        <div class="g-label">Box of Books</div>
+      </a>
+      <a href="https://school.eb.com.au/login?accessId=ccmschools&amp;passcode=ls4114" class="g-item">
+        <div class="g-icon"><img data-icon="#0972ce:Brit" alt="Britannica Encyclopedia"></div>
+        <div class="g-label">Britannica Encyclopedia</div>
+      </a>
+      <a href="https://www.canva.com/login/sso/22539109-c489-451e-9ebf-8806a6c73785" class="g-item">
+        <div class="g-icon" style="background-color:#0972ce"><img src="../icons/svg/learner-link.svg" alt="Canva"></div>
+        <div class="g-label">Canva</div>
+      </a>
+      <a href="https://saml-in4.clickview.com.au/Shibboleth.sso/ADM1069839" class="g-item">
+        <div class="g-icon" style="background-color:#0972ce"><img src="../icons/webp/ClickView.webp" alt="ClickView Video Library"></div>
+        <div class="g-label">ClickView Video Library</div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>A ministry of <a href="https://www.ccmschools.edu.au">Christian Community Ministries</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var dds          = document.querySelectorAll('.dd');
+      var topbar       = document.querySelector('.topbar');
+      var hamburgerBtn = document.querySelector('.hamburger-btn');
+      var topbarNav    = document.getElementById('topbar-nav');
+
+      function closeAllNav() {
+        dds.forEach(function (d) {
+          d.classList.remove('open');
+          d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
+        });
+        topbar.classList.remove('nav-open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      dds.forEach(function (dd) {
+        var btn = dd.querySelector('.dd-btn');
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var opening = !dd.classList.contains('open');
+          dds.forEach(function (d) {
+            d.classList.remove('open');
+            d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
+          });
+          if (opening) {
+            dd.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      document.addEventListener('click', closeAllNav);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { closeAllNav(); }
+      });
+
+      hamburgerBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var opening = !topbar.classList.contains('nav-open');
+        topbar.classList.toggle('nav-open', opening);
+        hamburgerBtn.setAttribute('aria-expanded', opening ? 'true' : 'false');
+        if (!opening) {
+          dds.forEach(function (d) {
+            d.classList.remove('open');
+            d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+
+      topbarNav.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+
+      var fBtns = document.querySelectorAll('.f-btn');
+      var grids = document.querySelectorAll('.grid');
+
+      fBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          fBtns.forEach(function (b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          grids.forEach(function (g) { g.classList.remove('active'); });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          var target = document.getElementById(btn.dataset.target);
+          if (target) { target.classList.add('active'); }
+        });
+      });
+
+      document.querySelectorAll('img[data-icon]').forEach(function (img) {
+        var raw   = img.getAttribute('data-icon');
+        var colon = raw.indexOf(':');
+        var color = raw.slice(0, colon);
+        var label = raw.slice(colon + 1);
+        var fs    = label.length > 3 ? 16 : label.length > 2 ? 20 : 26;
+        var svg =
+          "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'>" +
+          "<rect width='80' height='80' fill='" + color + "'/>" +
+          "<text x='40' y='40' font-size='" + fs + "'" +
+          " text-anchor='middle' dominant-baseline='middle'" +
+          " fill='white' font-family='sans-serif' font-weight='400'>" +
+          label +
+          "</text></svg>";
+        img.src = 'data:image/svg+xml,' + encodeURIComponent(svg);
+      });
+
+    })();
+  </script>
+
+</body>
+
+</html>

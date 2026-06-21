@@ -1,0 +1,37 @@
+[
+  {
+    "id": "students",
+    "label": "Students",
+    "only": "school"
+  },
+  {
+    "id": "pandc",
+    "label": "Parents & Carers",
+    "only": "school"
+  },
+  {
+    "id": "support",
+    "label": "Technical Support",
+    "only": "school"
+  },
+  {
+    "id": "ms-portals",
+    "label": "Microsoft Portals",
+    "only": "ccm-internal"
+  },
+  {
+    "id": "ccm-t1-services",
+    "label": "Tier 1 Services",
+    "only": "ccm-internal"
+  },
+  {
+    "id": "ccm-t2-services",
+    "label": "Tier 2 Services",
+    "only": "ccm-internal"
+  },
+  {
+    "id": "other",
+    "label": "Other",
+    "only": "ccm-internal"
+  }
+]

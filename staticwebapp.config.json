@@ -1,0 +1,17 @@
+{
+  "routes": [
+    { "route": "/_data/*",   "statusCode": 404 },
+    { "route": "/build.js",  "statusCode": 404 }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html",
+      "statusCode": 404
+    }
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  }
+}

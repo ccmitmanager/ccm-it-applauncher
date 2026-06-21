@@ -1,0 +1,329 @@
+{
+  "ccm-t1-services": [
+    {
+      "id": "clickview",
+      "href": "https://saml-in4.clickview.com.au/Shibboleth.sso/ADM1069839",
+      "icon_src": "svg/clickview.svg",
+      "label": "ClickView Video Library"
+    },
+    {
+      "id": "codetwo-admin",
+      "href": "https://app.codetwo.com/",
+      "icon_src": "svg/codetwo.svg",
+      "label": "CodeTwo Email Signatures Management"
+    },
+    {
+      "id": "docs",
+      "href": "https://docs.ccmschools.app/",
+      "icon_src": "svg/ic_fluent_book_48_color.svg",
+      "label": "Corporate Systems Documentation"
+    },
+    {
+      "id": "edval",
+      "href": "https://www.edval.education/",
+      "icon_src": "webp/edval.webp",
+      "bg": "#f4f4f4",
+      "label": "Edval Timetabler"
+    },
+    {
+      "id": "itcthinkdrive",
+      "href": "https://app.itcthinkdrive.com.au/login",
+      "icon_src": "webp/itcthinkdrive.webp",
+      "bg": "#f4f4f4",
+      "label": "ITC ThinkDrive"
+    },
+    {
+      "id": "learnerlink",
+      "href": "https://learnerlink.instructure.com/accounts/1?",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "bg": "#2c497e",
+      "label": "Learner.Link Admin"
+    },
+    {
+      "id": "owna",
+      "href": "https://portal.owna.com.au/",
+      "icon_src": "svg/owna.svg",
+      "bg": "#d3ece8",
+      "label": "OWNA Portal"
+    }
+  ],
+  "ccm-t2-services": [
+    {
+      "id": "codetwo-user",
+      "href": "https://user.codetwo.com/",
+      "icon": "CodeTwo",
+      "label": "CodeTwo Email Signature – My User Info",
+      "only": [
+        "CCMIT"
+      ]
+    },
+    {
+      "id": "docs",
+      "href": "https://docs.ccmschools.app/",
+      "icon": "Docs",
+      "label": "Corporate Systems Documentation",
+      "only": [
+        "CCMIT"
+      ]
+    },
+    {
+      "id": "learnerlink",
+      "href": "http://learnerlink.instructure.com/login/saml",
+      "icon": "LL",
+      "label": "Learner.Link (Staff & Students)",
+      "only": [
+        "CCMIT"
+      ]
+    },
+    {
+      "id": "mfa",
+      "href": "https://mysignins.microsoft.com/security-info",
+      "icon": "MFA",
+      "label": "Manage Multifactor Authentication",
+      "only": [
+        "CCMIT"
+      ]
+    }
+  ],
+  "ms-portals": [
+    {
+      "id": "entra",
+      "href": "https://en.cmd.ms",
+      "icon_src": "svg/entra.svg",
+      "label": "Microsoft Entra"
+    },
+    {
+      "id": "graph-explorer",
+      "href": "https://ge.cmd.ms",
+      "icon_src": "svg/10318-icon-service-Resource-Graph-Explorer.svg",
+      "label": "Graph Explorer"
+    },
+    {
+      "id": "intune",
+      "href": "https://in.cmd.ms",
+      "icon_src": "svg/microsoftIntune.svg",
+      "label": "Intune"
+    },
+    {
+      "id": "laps",
+      "href": "https://enlaps.cmd.ms",
+      "icon_src": "svg/microsoftIntuneLaps.svg",
+      "label": "LAPS"
+    },
+    {
+      "id": "m365-admin",
+      "href": "https://admin.cmd.ms",
+      "icon_src": "svg/ic_fluent_admincenter_24_color.svg",
+      "label": "Microsoft 365 Admin Centre"
+    },
+    {
+      "id": "mfa",
+      "href": "https://mymfa.cmd.ms",
+      "icon_src": "svg/microsoftAuthenticatorMfa.svg",
+      "label": "My MFA"
+    },
+    {
+      "id": "o365-admin",
+      "href": "https://m365apps.cmd.ms",
+      "icon_src": "svg/office.svg",
+      "label": "Office 365 Admin Centre"
+    },
+    {
+      "id": "pim",
+      "href": "https://enpimr.cmd.ms",
+      "icon_src": "svg/privilegedIdentityManagement.svg",
+      "label": "Privileged Identity Management"
+    },
+    {
+      "id": "purview",
+      "href": "https://pu.cmd.ms",
+      "icon_src": "svg/purview.svg",
+      "label": "Microsoft Purview"
+    },
+    {
+      "id": "quarantine",
+      "href": "https://deqre.cmd.ms",
+      "icon_src": "svg/ic_fluent_mail_48_color.svg",
+      "label": "Quarantined Emails"
+    },
+    {
+      "id": "teams-admin",
+      "href": "https://teams.cmd.ms",
+      "icon_src": "svg/teams.svg",
+      "label": "Teams Admin"
+    },
+    {
+      "id": "vlsc",
+      "href": "https://macvlsc.cmd.ms",
+      "icon_src": "svg/ic_fluent_puzzle_piece_48_color.svg",
+      "label": "VLSC"
+    }
+  ],
+  "other": [
+    {
+      "id": "bpoint",
+      "href": "https://www.bpoint.com.au/backoffice/",
+      "icon_src": "Credit-Card.webp",
+      "label": "BPOINT BackOffice"
+    },
+    {
+      "id": "busminder",
+      "href": "https://ccm.busminder.com.au/school/",
+      "icon_src": "BusMinder.webp",
+      "label": "BusMinder"
+    },
+    {
+      "id": "codetwo-admin",
+      "href": "https://app.codetwo.com/",
+      "icon_src": "CodeTwo.webp",
+      "label": "CodeTwo Email Signatures Management"
+    },
+    {
+      "id": "commbiz",
+      "href": "http://www.commbiz.com.au/",
+      "icon_src": "CommBiz.webp",
+      "label": "CommBiz Banking"
+    },
+    {
+      "id": "edval",
+      "href": "https://ccmschools.app/go/edval",
+      "icon_src": "Edval-1.webp",
+      "label": "EdVal"
+    },
+    {
+      "id": "enrolhq",
+      "href": "https://ccmschools.app/go/enrolhq/",
+      "icon_src": "EnrolHQ-1.webp",
+      "label": "Enrol HQ"
+    },
+    {
+      "id": "facts-bcc",
+      "href": "https://bcc.factsmgt.com.au/",
+      "icon_src": "Logo-Facts.webp",
+      "bg": "honeydew",
+      "label": "FACTS (BCC)"
+    },
+    {
+      "id": "lightspeed",
+      "href": "https://ccmschools.app/go/lightspeed",
+      "icon_src": "Lightspeed.webp",
+      "label": "Lightspeed POS"
+    },
+    {
+      "id": "owna",
+      "href": "https://portal.owna.com.au/login.aspx",
+      "icon_src": "Owna.webp",
+      "label": "OWNA Childcare Management"
+    },
+    {
+      "id": "spider-hcc",
+      "href": "https://hopecc.factsmgt.com.au/Pages/Login.aspx",
+      "icon_src": "PCSchool.webp",
+      "label": "Spider (HCC)"
+    }
+  ],
+  "students": [
+    {
+      "id": "bccc-edumate",
+      "href": "https://blakescrossing.edumate.net.au/",
+      "icon": "Edumate",
+      "label": "Edumate Student Information System",
+      "only": [
+        "BCCC"
+      ]
+    },
+    {
+      "id": "boxofbooks",
+      "href": "https://blakescrossing-college.boxofbooks.io/",
+      "icon": "BoB",
+      "label": "Box of Books",
+      "exclude": [
+        "BRICC",
+        "CORCC",
+        "DUNCC",
+        "HOPCC",
+        "RIVCC"
+      ]
+    },
+    {
+      "id": "britannica",
+      "href": "https://school.eb.com.au/login?accessId=ccmschools&passcode=ls4114",
+      "icon": "Brit",
+      "label": "Britannica Encyclopedia"
+    },
+    {
+      "id": "canva",
+      "href": "https://www.canva.com/login/sso/22539109-c489-451e-9ebf-8806a6c73785",
+      "icon_src": "svg/learner-link.svg",
+      "label": "Canva"
+    },
+    {
+      "id": "clickview",
+      "href": "https://saml-in4.clickview.com.au/Shibboleth.sso/ADM1069839",
+      "icon_src": "webp/ClickView.webp",
+      "label": "ClickView Video Library"
+    }
+  ],
+  "training": [
+    {
+      "id": "docs-support",
+      "href": "https://docs.ccmschools.app/",
+      "icon_src": "Documentation.webp",
+      "label": "Corporate Systems Documentation"
+    },
+    {
+      "id": "edumate-support",
+      "href": "mailto:edumate-support@ccmschools.edu.au",
+      "icon_src": "Edumate-Support.webp",
+      "label": "Edumate Student Information System"
+    },
+    {
+      "id": "hardware-support",
+      "href": "https://servicedesk.ccmschools.app/support/tickets/new?workspace_id=2",
+      "icon_src": "Laptop-Support.webp",
+      "label": "College Issued Hardware"
+    },
+    {
+      "id": "learnerlink-support",
+      "href": "https://ccmschools.app/go/learner-link-technical-support",
+      "icon_src": "LearnerLink-logo-Support.webp",
+      "label": "Learner.Link LMS"
+    },
+    {
+      "id": "mobile-apps",
+      "href": "mailto:edumate-support@ccmschools.edu.au",
+      "icon_src": "Mobile-Support.webp",
+      "label": "College Mobile Apps"
+    },
+    {
+      "id": "parent-accounts",
+      "href": "https://ccm-parent-uas.paperform.co/",
+      "icon_src": "Parents-Support.webp",
+      "label": "Parent Accounts & Passwords"
+    },
+    {
+      "id": "phone-system",
+      "href": "#",
+      "icon_src": "Telephone-grey.webp",
+      "label": "Phone System"
+    },
+    {
+      "id": "staff-accounts",
+      "href": "mailto:servicedesk@ccmschools.edu.au",
+      "icon_src": "Teacher-Support.webp",
+      "label": "Staff Accounts & Passwords"
+    },
+    {
+      "id": "student-accounts",
+      "href": "https://ccm-student-account.paperform.co/",
+      "icon_src": "Student-Support.webp",
+      "label": "Student Accounts & Passwords"
+    },
+    {
+      "id": "teams-support",
+      "href": "https://ccmschools.app/go/teams-technical-support/",
+      "icon_src": "Teams.webp",
+      "label": "Microsoft Teams"
+    }
+  ]
+}
