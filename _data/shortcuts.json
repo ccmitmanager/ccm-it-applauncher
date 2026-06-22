@@ -1,6 +1,13 @@
 {
   "ccm-t1-services": [
     {
+      "id": "3cx",
+      "href": "https://ccmschools.3cx.com.au/#/office/dashboard",
+      "icon_src": "svg/3cx.svg",
+      "label": "3CX Dashboard",
+      "bg": "honeydew"
+    },
+    {
       "id": "bitwarden",
       "href": "https://vault.bitwarden.com/",
       "icon_src": "svg/bitwarden.svg",
@@ -83,6 +90,13 @@
       "icon_src": "webp/itcthinkdrive.webp",
       "label": "ITC ThinkDrive",
       "bg": "#f4f4f4"
+    },
+    {
+      "id": "senso",
+      "href": "https://app.senso.cloud/admin-centre",
+      "icon_src": "svg/senso.svg",
+      "label": "Senso Class.Cloud Admin",
+      "bg": "honeydew"
     }
   ],
   "ms-portals": [
@@ -145,6 +159,12 @@
       "href": "https://enpimr.cmd.ms",
       "icon_src": "svg/privilegedIdentityManagement.svg",
       "label": "Privileged Identity Management"
+    },
+    {
+      "id": "powerautomate",
+      "href": "https://pa.cmd.msc",
+      "icon_src": "svg/power-automate.svg",
+      "label": "Power Automate"
     },
     {
       "id": "purview",
@@ -233,6 +253,13 @@
       "href": "https://hopecc.factsmgt.com.au/Pages/Login.aspx",
       "icon_src": "webp/PCSchool.webp",
       "label": "Spider (HCC)"
+    },
+    {
+      "id": "unifi",
+      "href": "https://unifi.ui.com",
+      "icon_src": "svg/ui.svg",
+      "label": "UniFi Portal",
+      "bg": "#ddd"
     }
   ],
   "students": [
