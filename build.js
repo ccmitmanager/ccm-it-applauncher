@@ -46,10 +46,47 @@ function sectionVisibleFor(section, unit) {
   return true;
 }
 
+// Detect whether a WebP file has an alpha channel by reading its header.
+// (RIFF container: "VP8X" extended sets an alpha flag; "VP8L" lossless has an
+// alpha_is_used bit; "VP8 " simple-lossy never has alpha.)
+function webpHasAlpha(absPath) {
+  let fd;
+  try {
+    fd = fs.openSync(absPath, 'r');
+    const buf = Buffer.alloc(25);
+    const n = fs.readSync(fd, buf, 0, 25, 0);
+    if (n < 16 || buf.toString('ascii', 0, 4) !== 'RIFF' || buf.toString('ascii', 8, 12) !== 'WEBP') {
+      return false;
+    }
+    const fourcc = buf.toString('ascii', 12, 16);
+    if (fourcc === 'VP8X') return n >= 21 && (buf[20] & 0x10) !== 0;      // alpha flag
+    if (fourcc === 'VP8L') {                                              // alpha_is_used bit
+      if (n < 25 || buf[20] !== 0x2f) return false;
+      const bits = (buf[21] | (buf[22] << 8) | (buf[23] << 16) | (buf[24] << 24)) >>> 0;
+      return ((bits >> 28) & 1) === 1;
+    }
+    return false;
+  } catch {
+    return false;
+  } finally {
+    if (fd !== undefined) fs.closeSync(fd);
+  }
+}
+
+// Transparent raster icons need the same inset as SVGs. Memoised per file.
+const _insetCache = new Map();
+function needsInset(iconSrc) {
+  if (!/\.webp$/i.test(iconSrc)) return false;
+  const abs = path.join('icons', iconSrc);
+  if (!_insetCache.has(abs)) _insetCache.set(abs, webpHasAlpha(abs));
+  return _insetCache.get(abs);
+}
+
 function renderIcon(sc, accent) {
   if (sc.icon_src) {
     const style = ` style="background-color:${esc(sc.bg || accent)}"`;
-    return `<div class="g-icon"${style}><img src="${root}icons/${esc(sc.icon_src)}" alt="${esc(sc.label)}"></div>`;
+    const cls = needsInset(sc.icon_src) ? ' class="inset"' : '';
+    return `<div class="g-icon"${style}><img src="${root}icons/${esc(sc.icon_src)}" alt="${esc(sc.label)}"${cls}></div>`;
   }
   const color = sc.color || accent;
   return `<div class="g-icon"><img data-icon="${esc(color)}:${esc(sc.icon)}" alt="${esc(sc.label)}"></div>`;

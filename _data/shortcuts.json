@@ -41,7 +41,7 @@
       "href": "https://www.edval.education/",
       "icon_src": "webp/edval.webp",
       "label": "Edval Timetabler",
-      "bg": "#f4f4f4"
+      "bg": "honeydew"
     },
     {
       "id": "learnerlink",
@@ -183,13 +183,6 @@
       "href": "https://ccm.busminder.com.au/school/",
       "icon_src": "webp/BusMinder.webp",
       "label": "BusMinder"
-    },
-    {
-      "id": "edval",
-      "href": "https://ccmschools.app/go/edval",
-      "icon_src": "webp/edval.webp",
-      "label": "EdVal",
-      "bg": "honeydew"
     },
     {
       "id": "enrolhq",

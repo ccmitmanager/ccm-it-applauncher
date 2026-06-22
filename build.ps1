@@ -41,12 +41,45 @@ function Test-SectionVisibleFor($section, $unit) {
     return $true
 }
 
+# Detect whether a WebP file has an alpha channel by reading its header.
+# (RIFF container: "VP8X" extended sets an alpha flag; "VP8L" lossless has an
+# alpha_is_used bit; "VP8 " simple-lossy never has alpha.)
+function Test-WebpHasAlpha([string]$file) {
+    if (-not (Test-Path -LiteralPath $file)) { return $false }
+    try {
+        $b = [System.IO.File]::ReadAllBytes($file)
+        if ($b.Length -lt 16) { return $false }
+        if ([System.Text.Encoding]::ASCII.GetString($b, 0, 4) -ne 'RIFF' -or
+            [System.Text.Encoding]::ASCII.GetString($b, 8, 4) -ne 'WEBP') { return $false }
+        $fourcc = [System.Text.Encoding]::ASCII.GetString($b, 12, 4)
+        if ($fourcc -eq 'VP8X') { return ($b.Length -ge 21 -and ($b[20] -band 0x10) -ne 0) }   # alpha flag
+        if ($fourcc -eq 'VP8L') {                                                               # alpha_is_used bit
+            if ($b.Length -lt 25 -or $b[20] -ne 0x2f) { return $false }
+            $bits = [uint32]$b[21] -bor ([uint32]$b[22] -shl 8) -bor ([uint32]$b[23] -shl 16) -bor ([uint32]$b[24] -shl 24)
+            return ((($bits -shr 28) -band 1) -eq 1)
+        }
+        return $false
+    } catch { return $false }
+}
+
+# Transparent raster icons need the same inset as SVGs. Memoised per file.
+$script:InsetCache = @{}
+function Test-NeedsInset([string]$iconSrc) {
+    if ($iconSrc -notmatch '\.webp$') { return $false }
+    $abs = Join-Path 'icons' $iconSrc
+    if (-not $script:InsetCache.ContainsKey($abs)) {
+        $script:InsetCache[$abs] = Test-WebpHasAlpha $abs
+    }
+    return $script:InsetCache[$abs]
+}
+
 function Render-Icon($sc, [string]$accent) {
     if ($sc.icon_src) {
         $src   = EscHtml $sc.icon_src
         $alt   = EscHtml $sc.label
         $style = " style=`"background-color:$(EscHtml $(if ($sc.bg) { $sc.bg } else { $accent }))`""
-        return "<div class=`"g-icon`"$style><img src=`"$($root)icons/$src`" alt=`"$alt`"></div>"
+        $cls   = if (Test-NeedsInset $sc.icon_src) { ' class="inset"' } else { '' }
+        return "<div class=`"g-icon`"$style><img src=`"$($root)icons/$src`" alt=`"$alt`"$cls></div>"
     }
     $color     = if ($sc.color) { $sc.color } else { $accent }
     $dataIcon  = "$(EscHtml $color):$(EscHtml $sc.icon)"
