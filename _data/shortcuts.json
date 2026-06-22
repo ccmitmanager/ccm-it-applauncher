@@ -9,7 +9,7 @@
     {
       "id": "cia",
       "href": "https://ccm.t1cloud.com/",
-      "icon": "svg/T1_Favicon_Light.svg",
+      "icon_src": "svg/cianywhere.svg",
       "label": "Ci Anywhere"
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": "edumate",
       "href": "https://edumate.app",
-      "icon_src": "webp/edumate.webp",
+      "icon_src": "svg/edumate.svg",
       "label": "Edumate"
     },
     {
