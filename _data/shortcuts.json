@@ -199,6 +199,13 @@
   ],
   "other": [
     {
+      "id": "adobe-adminconsole",
+      "href": "https://adminconsole.adobe.com/",
+      "icon_src": "svg/adobe.svg",
+      "label": "Adobe Admin Console",
+      "bg": "#ddd"
+    },
+    {
       "id": "busminder",
       "href": "https://ccm.busminder.com.au/school/",
       "icon_src": "webp/BusMinder.webp",
@@ -230,6 +237,12 @@
       "label": "IT ServiceDesk"
     },
     {
+      "id": "it-shareddocs",
+      "href": "https://ccmschools.sharepoint.com/sites/it-staff/_layouts/15/Doc.aspx?sourcedoc={ea5f0fea-1816-40ef-b770-fefc3a48c4b2}",
+      "icon_src": "svg/onenote.svg",
+      "label": "CCM IT Documentation"
+    },
+    {
       "id": "lightspeed",
       "href": "https://ccmschools.app/go/lightspeed",
       "icon_src": "webp/Lightspeed.webp",
@@ -240,6 +253,19 @@
       "href": "https://admin.parentidpassport.com/PIPSPlus-Admin/",
       "icon_src": "webp/pipsadmin.webp",
       "label": "PIPSPlus Admin"
+    },
+    {
+      "id": "sendgrid",
+      "href": "https://app.sendgrid.com/",
+      "icon_src": "svg/sendgrid.svg",
+      "label": "SendGrid"
+    },
+    {
+      "id": "smscentral",
+      "href": "https://my.smscentral.com.au/",
+      "icon_src": "svg/smscentral.svg",
+      "label": "SMS Central",
+      "bg": "honeydew"
     },
     {
       "id": "snipe-it",
@@ -259,6 +285,13 @@
       "href": "https://unifi.ui.com",
       "icon_src": "svg/ui.svg",
       "label": "UniFi Portal",
+      "bg": "#ddd"
+    },
+    {
+      "id": "vivi",
+      "href": "https://ccm.admin.vivi.io/",
+      "icon_src": "svg/vivi.svg",
+      "label": "Vivi Admin",
       "bg": "#ddd"
     }
   ],
