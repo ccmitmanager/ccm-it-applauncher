@@ -185,6 +185,12 @@
       "label": "BusMinder"
     },
     {
+      "id": "cmd.ms",
+      "href": "https://cmd.ms/",
+      "icon_src": "svg/terminal.svg",
+      "label": "[cmd.ms] Microsoft Cloud command line"
+    },
+    {
       "id": "enrolhq",
       "href": "https://ccmschools.app/go/enrolhq/",
       "icon_src": "webp/EnrolHQ-1.webp",
