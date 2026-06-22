@@ -324,9 +324,9 @@ body {
   padding: 20%;
 }
 
-/* Transparent WebP icons get the same inset (class added at build time) */
+/* Transparent WebP icons get a smaller inset (class added at build time) */
 .g-icon img.inset {
-  padding: 20%;
+  padding: 10%;
 }
 
 /* Label — grows to fill remaining card height so text stays centred */
