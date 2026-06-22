@@ -22,29 +22,29 @@
       "id": "edval",
       "href": "https://www.edval.education/",
       "icon_src": "webp/edval.webp",
-      "bg": "#f4f4f4",
-      "label": "Edval Timetabler"
+      "label": "Edval Timetabler",
+      "bg": "#f4f4f4"
     },
     {
       "id": "itcthinkdrive",
       "href": "https://app.itcthinkdrive.com.au/login",
       "icon_src": "webp/itcthinkdrive.webp",
-      "bg": "#f4f4f4",
-      "label": "ITC ThinkDrive"
+      "label": "ITC ThinkDrive",
+      "bg": "#f4f4f4"
     },
     {
       "id": "learnerlink",
       "href": "https://learnerlink.instructure.com/accounts/1?",
       "icon_src": "svg/learner-link-trimmed.svg",
-      "bg": "#2c497e",
-      "label": "Learner.Link Admin"
+      "label": "Learner.Link Admin",
+      "bg": "#2c497e"
     },
     {
       "id": "owna",
       "href": "https://portal.owna.com.au/",
       "icon_src": "svg/owna.svg",
-      "bg": "#d3ece8",
-      "label": "OWNA Portal"
+      "label": "OWNA Portal",
+      "bg": "#d3ece8"
     }
   ],
   "ccm-t2-services": [
@@ -87,10 +87,22 @@
   ],
   "ms-portals": [
     {
+      "id": "defender",
+      "href": "https://security.microsoft.com/homepage?tid=912e9bd6-236e-46f5-9c0c-b99867e6b99b",
+      "icon_src": "svg/defender.svg",
+      "label": "Microsoft Defender"
+    },
+    {
       "id": "entra",
       "href": "https://en.cmd.ms",
       "icon_src": "svg/entra.svg",
       "label": "Microsoft Entra"
+    },
+    {
+      "id": "exchange",
+      "href": "https://admin.cloud.microsoft/exchange#/",
+      "icon_src": "svg/exchange.svg",
+      "label": "Microsoft Exchange Online"
     },
     {
       "id": "graph-explorer",
@@ -147,6 +159,12 @@
       "label": "Quarantined Emails"
     },
     {
+      "id": "sharepoint",
+      "href": "https://ccmschools-admin.sharepoint.com/",
+      "icon_src": "svg/sharepoint.svg",
+      "label": "SharePoint Admin Centre"
+    },
+    {
       "id": "teams-admin",
       "href": "https://teams.cmd.ms",
       "icon_src": "svg/teams.svg",
@@ -200,8 +218,8 @@
       "id": "facts-bcc",
       "href": "https://bcc.factsmgt.com.au/",
       "icon_src": "Logo-Facts.webp",
-      "bg": "honeydew",
-      "label": "FACTS (BCC)"
+      "label": "FACTS (BCC)",
+      "bg": "honeydew"
     },
     {
       "id": "lightspeed",
