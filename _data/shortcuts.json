@@ -216,6 +216,12 @@
       "label": "Lightspeed POS"
     },
     {
+      "id": "pipsadmin",
+      "href": "https://admin.parentidpassport.com/PIPSPlus-Admin/",
+      "icon_src": "webp/pipsadmin.webp",
+      "label": "PIPSPlus Admin"
+    },
+    {
       "id": "snipe-it",
       "href": "https://asset.manage.ccmschools.edu.au",
       "icon_src": "svg/ic_fluent_arrow_clockwise_dashes_settings_48_color.svg",
