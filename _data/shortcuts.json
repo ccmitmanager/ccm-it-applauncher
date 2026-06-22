@@ -188,7 +188,8 @@
       "id": "edval",
       "href": "https://ccmschools.app/go/edval",
       "icon_src": "webp/edval.webp",
-      "label": "EdVal"
+      "label": "EdVal",
+      "bg": "honeydew"
     },
     {
       "id": "enrolhq",
@@ -219,7 +220,8 @@
       "id": "snipe-it",
       "href": "https://asset.manage.ccmschools.edu.au",
       "icon_src": "svg/ic_fluent_arrow_clockwise_dashes_settings_48_color.svg",
-      "label": "Snipe-IT Asset Management"
+      "label": "Snipe-IT Asset Management",
+      "bg": "honeydew"
     },
     {
       "id": "spider-hcc",
