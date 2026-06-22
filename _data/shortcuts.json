@@ -1,6 +1,12 @@
 {
   "ccm-t1-services": [
     {
+      "id": "bitwarden",
+      "href": "https://vault.bitwarden.com/",
+      "icon_src": "svg/bitwarden.svg",
+      "label": "Bitwarden"
+    },
+    {
       "id": "cia",
       "href": "https://ccm.t1cloud.com/",
       "icon": "svg/T1_Favicon_Light.svg",
@@ -173,64 +179,52 @@
   ],
   "other": [
     {
-      "id": "bpoint",
-      "href": "https://www.bpoint.com.au/backoffice/",
-      "icon_src": "Credit-Card.webp",
-      "label": "BPOINT BackOffice"
-    },
-    {
       "id": "busminder",
       "href": "https://ccm.busminder.com.au/school/",
-      "icon_src": "BusMinder.webp",
+      "icon_src": "webp/BusMinder.webp",
       "label": "BusMinder"
-    },
-    {
-      "id": "codetwo-admin",
-      "href": "https://app.codetwo.com/",
-      "icon_src": "CodeTwo.webp",
-      "label": "CodeTwo Email Signatures Management"
-    },
-    {
-      "id": "commbiz",
-      "href": "http://www.commbiz.com.au/",
-      "icon_src": "CommBiz.webp",
-      "label": "CommBiz Banking"
     },
     {
       "id": "edval",
       "href": "https://ccmschools.app/go/edval",
-      "icon_src": "Edval-1.webp",
+      "icon_src": "webp/edval.webp",
       "label": "EdVal"
     },
     {
       "id": "enrolhq",
       "href": "https://ccmschools.app/go/enrolhq/",
-      "icon_src": "EnrolHQ-1.webp",
+      "icon_src": "webp/EnrolHQ-1.webp",
       "label": "Enrol HQ"
     },
     {
       "id": "facts-bcc",
       "href": "https://bcc.factsmgt.com.au/",
-      "icon_src": "Logo-Facts.webp",
+      "icon_src": "webp/Logo-Facts.webp",
       "label": "FACTS (BCC)",
       "bg": "honeydew"
     },
     {
+      "id": "it-servicedesk",
+      "href": "https://it.servicedesk.ccmschools.app/",
+      "icon_src": "svg/field-service.svg",
+      "label": "IT ServiceDesk"
+    },
+    {
       "id": "lightspeed",
       "href": "https://ccmschools.app/go/lightspeed",
-      "icon_src": "Lightspeed.webp",
+      "icon_src": "webp/Lightspeed.webp",
       "label": "Lightspeed POS"
     },
     {
-      "id": "owna",
-      "href": "https://portal.owna.com.au/login.aspx",
-      "icon_src": "Owna.webp",
-      "label": "OWNA Childcare Management"
+      "id": "snipe-it",
+      "href": "https://asset.manage.ccmschools.edu.au",
+      "icon_src": "svg/ic_fluent_arrow_clockwise_dashes_settings_48_color.svg",
+      "label": "Snipe-IT Asset Management"
     },
     {
       "id": "spider-hcc",
       "href": "https://hopecc.factsmgt.com.au/Pages/Login.aspx",
-      "icon_src": "PCSchool.webp",
+      "icon_src": "webp/PCSchool.webp",
       "label": "Spider (HCC)"
     }
   ],
