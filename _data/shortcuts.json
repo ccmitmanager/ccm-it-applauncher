@@ -233,7 +233,7 @@
     {
       "id": "it-servicedesk",
       "href": "https://it.servicedesk.ccmschools.app/",
-      "icon_src": "svg/field-service.svg",
+      "icon_src": "svg/it-servicedesk.svg",
       "label": "IT ServiceDesk"
     },
     {
@@ -270,7 +270,7 @@
     {
       "id": "snipe-it",
       "href": "https://asset.manage.ccmschools.edu.au",
-      "icon_src": "svg/ic_fluent_arrow_clockwise_dashes_settings_48_color.svg",
+      "icon_src": "svg/octopus.svg",
       "label": "Snipe-IT Asset Management",
       "bg": "honeydew"
     },
