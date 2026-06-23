@@ -245,7 +245,7 @@
     {
       "id": "lightspeed",
       "href": "https://ccmschools.app/go/lightspeed",
-      "icon_src": "webp/Lightspeed.webp",
+      "icon_src": "svg/lightspeed.svg",
       "label": "Lightspeed POS"
     },
     {
