@@ -21,12 +21,12 @@
   },
   {
     "id": "ccm-t1-services",
-    "label": "Tier 1 Services",
+    "label": "Managed Platforms",
     "only": "ccm-internal"
   },
   {
     "id": "ccm-t2-services",
-    "label": "Tier 2 Services",
+    "label": "Enabled Platforms",
     "only": "ccm-internal"
   },
   {

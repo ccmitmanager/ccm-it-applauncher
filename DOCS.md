@@ -1,6 +1,6 @@
 # CCM IT App Launcher — Documentation
 
-A static site that generates a per–business-unit grid of app shortcuts. Content lives entirely in three JSON files under `_data/`; a build script turns them into one static HTML page per unit.
+A static site generator that produces a per–business-unit grid of app shortcuts. Content and structure lives in three JSON files under `_data/`; a build script turns them into one static HTML page per unit.
 
 ---
 
@@ -20,6 +20,22 @@ An array of business units. Each unit becomes its own page at `/<code>/`.
 | `collegeAppsUrl` | string | URL for the "College Apps" link in the nav bar.                     |
 | `tags`           | array  | Tags used for **section** visibility (e.g. `["school"]`).           |
 
+For example:
+
+```jsonc
+  {
+    "code": "CCMIT",
+    "name": "CCM IT Services",
+    "shortName": "CCM IT",
+    "accent": "#22325d",
+    "logo": "/style/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "tags": ["ccm-internal"]
+  }
+```
+
+Initial tags are `school` and `ccm-internal` but arbitrarily more could be added.
+
 ### `sections.json`
 
 An array of sections — the filter tabs shown on each page.
@@ -32,6 +48,21 @@ An array of sections — the filter tabs shown on each page.
 | `exclude` | string \| array | *(optional)* Hide for units whose `code` or `tags` match.         |
 
 A section only appears on a unit's page if it is visible for that unit **and** has at least one visible shortcut.
+
+Example:
+
+```jsonc
+  {
+    "id": "support",
+    "label": "Technical Support",
+    "only": "school"
+  },
+  {
+    "id": "ms-portals",
+    "label": "Microsoft Portals",
+    "only": "ccm-internal"
+  }
+```
 
 ### `shortcuts.json`
 
@@ -63,6 +94,10 @@ A top-level **object keyed by section `id`**. Each value is an array of shortcut
 
 **Visibility precedence:** if `only` is present it wins; otherwise `exclude` applies; otherwise the shortcut shows for every unit.
 
+## Combining unit and section tags for shortcut visibility
+
+In this structure an individual shortcut can only be a part of one section; so a link to Outlook Online would need to be created once for Students and again for Staff. Section tags allow for entire sections to be excluded from all business units. This is especially helpful for purpose-specific link pages, e.g. Edumate instance selection, IT links, Staff links. Unit tags using the Exclude and Only allow for school-specific exemptions or overrides in the **schools** sections, e.g. FACTS shortcuts for Brindabella and Hope or excluding Box of Books for schools who do not license it.
+
 ---
 
 ## Scripts (`.js`)
@@ -73,7 +108,7 @@ A top-level **object keyed by section `id`**. Each value is an array of shortcut
 node build.js
 ```
 
-Reads the three `_data/` files and writes `/<code>/index.html` for every unit. It also normalises `shortcuts.json` (sorts sections and entries) in place, so expect that file to be reformatted after a build. Pass `--relative` to emit relative asset paths for opening the generated pages directly from disk:
+Reads the three `_data/` files and writes `/<code>/index.html` for every unit. It also normalises `shortcuts.json` (sorts sections and entries) in place, so shortcuts are always populated on the link page in alphabetical order. Pass `--relative` to emit relative asset paths for opening the generated pages directly from disk (for testing only):
 
 ```shell
 node build.js --relative
@@ -86,6 +121,8 @@ node edit-shortcuts.js
 ```
 
 Starts a local web app (opens `http://localhost:4173`) for adding, editing, reordering and deleting shortcuts without hand-editing JSON. It reads section labels from `sections.json` and unit codes from `units.json`, supports both icon types, and writes changes back to `shortcuts.json`. Press `Ctrl+C` in the terminal to stop it.
+
+Icon files that exist at the time of the web app launch are read for path autocompletion but new icons added while it's running are not.
 
 ---
 
