@@ -162,7 +162,7 @@
     },
     {
       "id": "powerautomate",
-      "href": "https://pa.cmd.msc",
+      "href": "https://pa.cmd.ms",
       "icon_src": "svg/power-automate.svg",
       "label": "Power Automate"
     },
@@ -206,6 +206,12 @@
       "bg": "#ddd"
     },
     {
+      "id": "asm",
+      "href": "https://school.apple.com/",
+      "icon_src": "svg/apple.svg",
+      "label": "Apple School Manager"
+    },
+    {
       "id": "busminder",
       "href": "https://ccm.busminder.com.au/school/",
       "icon_src": "webp/BusMinder.webp",
@@ -243,6 +249,12 @@
       "label": "CCM IT Documentation"
     },
     {
+      "id": "jamf",
+      "href": "https://account.jamf.com/",
+      "icon_src": "svg/jamf.svg",
+      "label": "Jamf Pro"
+    },
+    {
       "id": "lightspeed",
       "href": "https://ccmschools.app/go/lightspeed",
       "icon_src": "svg/lightspeed.svg",
@@ -278,6 +290,13 @@
       "href": "https://hopecc.factsmgt.com.au/Pages/Login.aspx",
       "icon_src": "webp/PCSchool.webp",
       "label": "Spider (HCC)"
+    },
+    {
+      "id": "st4s",
+      "href": "https://st4s.edu.au/verify-a-badge/",
+      "icon_src": "svg/st4s.svg",
+      "label": "ST4S Verify a Badge",
+      "bg": "#ddd"
     },
     {
       "id": "unifi",
