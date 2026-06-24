@@ -41,14 +41,12 @@ function visibleOn(shortcut, unitCode) {
 
 function sectionVisibleFor(section, unit) {
   const tags = [unit.code, ...(unit.tags || [])];
-  if (section.only)    return [].concat(section.only).some(t => tags.includes(t));
-  if (section.exclude) return ![].concat(section.exclude).some(t => tags.includes(t));
+  if (section.only)    return section.only.some(t => tags.includes(t));
+  if (section.exclude) return !section.exclude.some(t => tags.includes(t));
   return true;
 }
 
-// Detect whether a WebP file has an alpha channel by reading its header.
-// (RIFF container: "VP8X" extended sets an alpha flag; "VP8L" lossless has an
-// alpha_is_used bit; "VP8 " simple-lossy never has alpha.)
+// Detect alpha channel by reading VP8X/VP8L header flags in the RIFF container.
 function webpHasAlpha(absPath) {
   let fd;
   try {
@@ -74,12 +72,12 @@ function webpHasAlpha(absPath) {
 }
 
 // Transparent raster icons need the same inset as SVGs. Memoised per file.
-const _insetCache = new Map();
+const insetCache = new Map();
 function needsInset(iconSrc) {
   if (!/\.webp$/i.test(iconSrc)) return false;
   const abs = path.join('icons', iconSrc);
-  if (!_insetCache.has(abs)) _insetCache.set(abs, webpHasAlpha(abs));
-  return _insetCache.get(abs);
+  if (!insetCache.has(abs)) insetCache.set(abs, webpHasAlpha(abs));
+  return insetCache.get(abs);
 }
 
 function renderIcon(sc, accent) {
@@ -131,13 +129,13 @@ const PAGE_SCRIPT = `  <script>
     (function () {
       'use strict';
 
-      var dds          = document.querySelectorAll('.dd');
-      var topbar       = document.querySelector('.topbar');
-      var hamburgerBtn = document.querySelector('.hamburger-btn');
-      var topbarNav    = document.getElementById('topbar-nav');
+      const dds          = document.querySelectorAll('.dd');
+      const topbar       = document.querySelector('.topbar');
+      const hamburgerBtn = document.querySelector('.hamburger-btn');
+      const topbarNav    = document.getElementById('topbar-nav');
 
       function closeAllNav() {
-        dds.forEach(function (d) {
+        dds.forEach(d => {
           d.classList.remove('open');
           d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
         });
@@ -145,12 +143,12 @@ const PAGE_SCRIPT = `  <script>
         hamburgerBtn.setAttribute('aria-expanded', 'false');
       }
 
-      dds.forEach(function (dd) {
-        var btn = dd.querySelector('.dd-btn');
-        btn.addEventListener('click', function (e) {
+      dds.forEach(dd => {
+        const btn = dd.querySelector('.dd-btn');
+        btn.addEventListener('click', e => {
           e.stopPropagation();
-          var opening = !dd.classList.contains('open');
-          dds.forEach(function (d) {
+          const opening = !dd.classList.contains('open');
+          dds.forEach(d => {
             d.classList.remove('open');
             d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
           });
@@ -162,51 +160,47 @@ const PAGE_SCRIPT = `  <script>
       });
 
       document.addEventListener('click', closeAllNav);
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') { closeAllNav(); }
-      });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllNav(); });
 
-      hamburgerBtn.addEventListener('click', function (e) {
+      hamburgerBtn.addEventListener('click', e => {
         e.stopPropagation();
-        var opening = !topbar.classList.contains('nav-open');
+        const opening = !topbar.classList.contains('nav-open');
         topbar.classList.toggle('nav-open', opening);
         hamburgerBtn.setAttribute('aria-expanded', opening ? 'true' : 'false');
         if (!opening) {
-          dds.forEach(function (d) {
+          dds.forEach(d => {
             d.classList.remove('open');
             d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
           });
         }
       });
 
-      topbarNav.addEventListener('click', function (e) {
-        e.stopPropagation();
-      });
+      topbarNav.addEventListener('click', e => e.stopPropagation());
 
-      var fBtns = document.querySelectorAll('.f-btn');
-      var grids = document.querySelectorAll('.grid');
+      const fBtns = document.querySelectorAll('.f-btn');
+      const grids = document.querySelectorAll('.grid');
 
-      fBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          fBtns.forEach(function (b) {
+      fBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          fBtns.forEach(b => {
             b.classList.remove('active');
             b.setAttribute('aria-selected', 'false');
           });
-          grids.forEach(function (g) { g.classList.remove('active'); });
+          grids.forEach(g => g.classList.remove('active'));
           btn.classList.add('active');
           btn.setAttribute('aria-selected', 'true');
-          var target = document.getElementById(btn.dataset.target);
-          if (target) { target.classList.add('active'); }
+          const target = document.getElementById(btn.dataset.target);
+          if (target) target.classList.add('active');
         });
       });
 
-      document.querySelectorAll('img[data-icon]').forEach(function (img) {
-        var raw   = img.getAttribute('data-icon');
-        var colon = raw.indexOf(':');
-        var color = raw.slice(0, colon);
-        var label = raw.slice(colon + 1);
-        var fs    = label.length > 3 ? 16 : label.length > 2 ? 20 : 26;
-        var svg =
+      document.querySelectorAll('img[data-icon]').forEach(img => {
+        const raw   = img.getAttribute('data-icon');
+        const colon = raw.indexOf(':');
+        const color = raw.slice(0, colon);
+        const label = raw.slice(colon + 1);
+        const fs    = label.length > 3 ? 16 : label.length > 2 ? 20 : 26;
+        const svg =
           "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'>" +
           "<rect width='80' height='80' fill='" + color + "'/>" +
           "<text x='40' y='40' font-size='" + fs + "'" +

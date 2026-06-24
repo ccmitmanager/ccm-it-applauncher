@@ -66,7 +66,7 @@
 
   <main class="grid-wrap">
     <div class="grid active" id="grid-students" role="tabpanel">
-      <a href="https://blakescrossing-college.boxofbooks.io/" class="g-item">
+      <a href="https://blakescrossing-college.boxofbooks.io" class="g-item">
         <div class="g-icon"><img data-icon="#000d3a:BoB" alt="Box of Books"></div>
         <div class="g-label">Box of Books</div>
       </a>
@@ -93,13 +93,13 @@
     (function () {
       'use strict';
 
-      var dds          = document.querySelectorAll('.dd');
-      var topbar       = document.querySelector('.topbar');
-      var hamburgerBtn = document.querySelector('.hamburger-btn');
-      var topbarNav    = document.getElementById('topbar-nav');
+      const dds          = document.querySelectorAll('.dd');
+      const topbar       = document.querySelector('.topbar');
+      const hamburgerBtn = document.querySelector('.hamburger-btn');
+      const topbarNav    = document.getElementById('topbar-nav');
 
       function closeAllNav() {
-        dds.forEach(function (d) {
+        dds.forEach(d => {
           d.classList.remove('open');
           d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
         });
@@ -107,12 +107,12 @@
         hamburgerBtn.setAttribute('aria-expanded', 'false');
       }
 
-      dds.forEach(function (dd) {
-        var btn = dd.querySelector('.dd-btn');
-        btn.addEventListener('click', function (e) {
+      dds.forEach(dd => {
+        const btn = dd.querySelector('.dd-btn');
+        btn.addEventListener('click', e => {
           e.stopPropagation();
-          var opening = !dd.classList.contains('open');
-          dds.forEach(function (d) {
+          const opening = !dd.classList.contains('open');
+          dds.forEach(d => {
             d.classList.remove('open');
             d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
           });
@@ -124,51 +124,47 @@
       });
 
       document.addEventListener('click', closeAllNav);
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') { closeAllNav(); }
-      });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllNav(); });
 
-      hamburgerBtn.addEventListener('click', function (e) {
+      hamburgerBtn.addEventListener('click', e => {
         e.stopPropagation();
-        var opening = !topbar.classList.contains('nav-open');
+        const opening = !topbar.classList.contains('nav-open');
         topbar.classList.toggle('nav-open', opening);
         hamburgerBtn.setAttribute('aria-expanded', opening ? 'true' : 'false');
         if (!opening) {
-          dds.forEach(function (d) {
+          dds.forEach(d => {
             d.classList.remove('open');
             d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
           });
         }
       });
 
-      topbarNav.addEventListener('click', function (e) {
-        e.stopPropagation();
-      });
+      topbarNav.addEventListener('click', e => e.stopPropagation());
 
-      var fBtns = document.querySelectorAll('.f-btn');
-      var grids = document.querySelectorAll('.grid');
+      const fBtns = document.querySelectorAll('.f-btn');
+      const grids = document.querySelectorAll('.grid');
 
-      fBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          fBtns.forEach(function (b) {
+      fBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          fBtns.forEach(b => {
             b.classList.remove('active');
             b.setAttribute('aria-selected', 'false');
           });
-          grids.forEach(function (g) { g.classList.remove('active'); });
+          grids.forEach(g => g.classList.remove('active'));
           btn.classList.add('active');
           btn.setAttribute('aria-selected', 'true');
-          var target = document.getElementById(btn.dataset.target);
-          if (target) { target.classList.add('active'); }
+          const target = document.getElementById(btn.dataset.target);
+          if (target) target.classList.add('active');
         });
       });
 
-      document.querySelectorAll('img[data-icon]').forEach(function (img) {
-        var raw   = img.getAttribute('data-icon');
-        var colon = raw.indexOf(':');
-        var color = raw.slice(0, colon);
-        var label = raw.slice(colon + 1);
-        var fs    = label.length > 3 ? 16 : label.length > 2 ? 20 : 26;
-        var svg =
+      document.querySelectorAll('img[data-icon]').forEach(img => {
+        const raw   = img.getAttribute('data-icon');
+        const colon = raw.indexOf(':');
+        const color = raw.slice(0, colon);
+        const label = raw.slice(colon + 1);
+        const fs    = label.length > 3 ? 16 : label.length > 2 ? 20 : 26;
+        const svg =
           "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'>" +
           "<rect width='80' height='80' fill='" + color + "'/>" +
           "<text x='40' y='40' font-size='" + fs + "'" +

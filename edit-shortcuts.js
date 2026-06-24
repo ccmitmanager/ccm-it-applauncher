@@ -1,14 +1,6 @@
 #!/usr/bin/env node
-/*
- * Graphical editor for AppLauncher shortcuts.json — Node.js version.
- *
- * Zero dependencies. Starts a small local web server and opens a browser UI
- * that lets you add / edit / delete / reorder shortcuts across all sections.
- * Reads sections.json for section labels and units.json for unit codes,
- * and offers data-icon ("icon") vs image ("icon_src") for each shortcut.
- *
- * Usage:  node edit-shortcuts.js
- */
+// Graphical editor for shortcuts.json — starts a local web server at http://localhost:4173.
+// Usage: node edit-shortcuts.js
 
 const http = require("http");
 const fs = require("fs");
@@ -303,7 +295,7 @@ function setDirty(v) {
 }
 
 function sectionMeta(id) { return DATA.sections.find((s) => s.id === id); }
-function isSchool(id) { const s = sectionMeta(id); return !!(s && s.only === "school"); }
+function isSchool(id) { const s = sectionMeta(id); return !!(s && s.only?.includes("school")); }
 
 function init(data) {
   DATA = data;

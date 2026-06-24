@@ -2,36 +2,36 @@
   {
     "id": "students",
     "label": "Students",
-    "only": "school"
+    "only": ["school"]
   },
   {
     "id": "pandc",
     "label": "Parents & Carers",
-    "only": "school"
+    "only": ["school"]
   },
   {
     "id": "support",
     "label": "Technical Support",
-    "only": "school"
+    "only": ["school"]
   },
   {
     "id": "ms-portals",
     "label": "Microsoft Portals",
-    "only": "ccm-internal"
+    "only": ["ccm-internal"]
   },
   {
     "id": "ccm-t1-services",
     "label": "Managed Platforms",
-    "only": "ccm-internal"
+    "only": ["ccm-internal"]
   },
   {
     "id": "ccm-t2-services",
     "label": "Enabled Platforms",
-    "only": "ccm-internal"
+    "only": ["ccm-internal"]
   },
   {
     "id": "other",
     "label": "Other",
-    "only": "ccm-internal"
+    "only": ["ccm-internal"]
   }
 ]
