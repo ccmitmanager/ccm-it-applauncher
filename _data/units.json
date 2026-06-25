@@ -4,7 +4,7 @@
     "name": "Blakes Crossing Christian College",
     "shortName": "Blakes",
     "accent": "#BDDFF5",
-    "logo": "/logos/bccc.png",
+    "logo": "/logos/bccc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -13,7 +13,7 @@
     "name": "Brindabella Christian College",
     "shortName": "Brindabella",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/bricc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -22,7 +22,7 @@
     "name": "Chinchilla Christian College",
     "shortName": "Chinchilla",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/chicc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -31,7 +31,7 @@
     "name": "Cornerstone Christian College",
     "shortName": "Cornerstone",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/corcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -40,7 +40,7 @@
     "name": "Dalby Christian College",
     "shortName": "Dalby",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/dalcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -49,7 +49,7 @@
     "name": "Dunsborough Christian College",
     "shortName": "Dunsborough",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/duncc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -58,7 +58,7 @@
     "name": "Endeavour Christian College",
     "shortName": "Endeavour",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/endcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -67,7 +67,7 @@
     "name": "Groves Christian College",
     "shortName": "Groves",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/grocc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -76,7 +76,7 @@
     "name": "Hope Christian College",
     "shortName": "Hope",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/hopcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -85,7 +85,7 @@
     "name": "Livingstone Christian College",
     "shortName": "Livingstone",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/livcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -94,7 +94,7 @@
     "name": "Rivers Christian College",
     "shortName": "Rivers",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/rivcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -103,7 +103,7 @@
     "name": "Seaview Christian College",
     "shortName": "Seaview",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/seacc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -112,7 +112,7 @@
     "name": "Staines Methodist College",
     "shortName": "Staines",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/stamc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -121,7 +121,7 @@
     "name": "The Lakes Christian College",
     "shortName": "The Lakes",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/tlcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -130,7 +130,7 @@
     "name": "Warwick Christian College",
     "shortName": "Warwick",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/warcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },
@@ -139,7 +139,7 @@
     "name": "Whitsunday Christian College",
     "shortName": "Whitsunday",
     "accent": "#BDDFF5",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/whicc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "tags": ["school"]
   },

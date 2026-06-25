@@ -315,6 +315,33 @@
   ],
   "students": [
     {
+      "id": "accessit-dalcc",
+      "href": "https://au.accessit.online/DLB01/#!dashboard",
+      "icon_src": "svg/library-alternative.svg",
+      "label": "Library Catalogue",
+      "only": [
+        "dalby"
+      ]
+    },
+    {
+      "id": "accessit-livcc",
+      "href": "https://au.accessit.online/LVN01/",
+      "icon_src": "svg/library-alternative.svg",
+      "label": "Library Catalogue",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
+      "id": "accessit-tlcc",
+      "href": "https://au.accessit.online/LKS03/#!dashboard",
+      "icon_src": "svg/library-alternative.svg",
+      "label": "Library Catalogue",
+      "only": [
+        "thelakes"
+      ]
+    },
+    {
       "id": "boxofbooks-bccc",
       "href": "https://blakescrossing-college.boxofbooks.io",
       "icon_src": "webp/boxofbooks.webp",
@@ -596,6 +623,51 @@
       "label": "MathSpace",
       "only": [
         "LIVCC"
+      ]
+    },
+    {
+      "id": "oliver-chicc",
+      "href": "https://chinchillacc.softlinkhosting.com.au/",
+      "icon_src": "svg/library.svg",
+      "label": "Oliver Library Catalogue",
+      "only": [
+        "chinchilla"
+      ]
+    },
+    {
+      "id": "oliver-corcc",
+      "href": "https://cornerstone.softlinkhosting.com.au/oliver/junior.do?corporation=CornerstoneChristianCollege",
+      "icon_src": "svg/library.svg",
+      "label": "Library Catalogue",
+      "only": [
+        "cornerstone"
+      ]
+    },
+    {
+      "id": "oliver-endcc",
+      "href": "https://endeavourcc.softlinkhosting.com.au/",
+      "icon_src": "svg/library.svg",
+      "label": "Oliver Library Catalogue",
+      "only": [
+        "endeavour"
+      ]
+    },
+    {
+      "id": "oliver-grocc",
+      "href": "http://groves.softlinkhosting.com.au/",
+      "icon_src": "svg/library.svg",
+      "label": "Olivery Library Catalogue",
+      "only": [
+        "groves"
+      ]
+    },
+    {
+      "id": "oliver-warcc",
+      "href": "https://warwickcc.softlinkhosting.com.au/oliver/main.do",
+      "icon_src": "svg/library.svg",
+      "label": "Oliver Library Catalogue",
+      "only": [
+        "warwick"
       ]
     },
     {
