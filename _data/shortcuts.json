@@ -5,7 +5,7 @@
       "href": "https://ccmschools.3cx.com.au/#/office/dashboard",
       "icon_src": "svg/3cx.svg",
       "label": "3CX Dashboard",
-      "bg": "honeydew"
+      "bg": "#BDDFF5"
     },
     {
       "id": "bitwarden",
@@ -48,7 +48,7 @@
       "href": "https://www.edval.education/",
       "icon_src": "webp/edval.webp",
       "label": "Edval Timetabler",
-      "bg": "honeydew"
+      "bg": "#BDDFF5"
     },
     {
       "id": "learnerlink",
@@ -62,7 +62,7 @@
       "href": "https://portal.owna.com.au/",
       "icon_src": "svg/owna.svg",
       "label": "OWNA Portal",
-      "bg": "#d3ece8"
+      "bg": "#BDDFF5"
     },
     {
       "id": "trackone",
@@ -89,14 +89,14 @@
       "href": "https://app.itcthinkdrive.com.au/login",
       "icon_src": "webp/itcthinkdrive.webp",
       "label": "ITC ThinkDrive",
-      "bg": "#f4f4f4"
+      "bg": "#BDDFF5"
     },
     {
       "id": "senso",
       "href": "https://app.senso.cloud/admin-centre",
       "icon_src": "svg/senso.svg",
       "label": "Senso Class.Cloud Admin",
-      "bg": "honeydew"
+      "bg": "#BDDFF5"
     }
   ],
   "ms-portals": [
@@ -203,7 +203,7 @@
       "href": "https://adminconsole.adobe.com/",
       "icon_src": "svg/adobe.svg",
       "label": "Adobe Admin Console",
-      "bg": "#ddd"
+      "bg": "#BDDFF5"
     },
     {
       "id": "asm",
@@ -234,7 +234,7 @@
       "href": "https://bcc.factsmgt.com.au/",
       "icon_src": "webp/Logo-Facts.webp",
       "label": "FACTS (BCC)",
-      "bg": "honeydew"
+      "bg": "#BDDFF5"
     },
     {
       "id": "it-servicedesk",
@@ -277,7 +277,7 @@
       "href": "https://my.smscentral.com.au/",
       "icon_src": "svg/smscentral.svg",
       "label": "SMS Central",
-      "bg": "honeydew"
+      "bg": "#BDDFF5"
     },
     {
       "id": "snipe-it",
@@ -296,63 +296,329 @@
       "href": "https://st4s.edu.au/verify-a-badge/",
       "icon_src": "svg/st4s.svg",
       "label": "ST4S Verify a Badge",
-      "bg": "#ddd"
+      "bg": "#BDDFF5"
     },
     {
       "id": "unifi",
       "href": "https://unifi.ui.com",
       "icon_src": "svg/ui.svg",
       "label": "UniFi Portal",
-      "bg": "#ddd"
+      "bg": "#BDDFF5"
     },
     {
       "id": "vivi",
       "href": "https://ccm.admin.vivi.io/",
       "icon_src": "svg/vivi.svg",
       "label": "Vivi Admin",
-      "bg": "#ddd"
+      "bg": "#BDDFF5"
     }
   ],
   "students": [
     {
-      "id": "bccc-edumate",
-      "href": "https://blakescrossing.edumate.net.au/",
-      "icon": "Edumate",
-      "label": "Edumate Student Information System",
+      "id": "boxofbooks-bccc",
+      "href": "https://blakescrossing-college.boxofbooks.io",
+      "icon_src": "webp/boxofbooks.webp",
+      "label": "Box of Books",
       "only": [
-        "BCCC"
+        "blakescrossing"
       ]
     },
     {
-      "id": "boxofbooks",
-      "href": "https://blakescrossing-college.boxofbooks.io",
-      "icon": "BoB",
+      "id": "boxofbooks-chicc",
+      "href": "https://chinchillacc-college.boxofbooks.io/",
+      "icon_src": "webp/boxofbooks.webp",
       "label": "Box of Books",
-      "exclude": [
-        "BRICC",
-        "CORCC",
-        "DUNCC",
-        "HOPCC",
-        "RIVCC"
+      "only": [
+        "chinchilla"
+      ]
+    },
+    {
+      "id": "boxofbooks-dalcc",
+      "href": "https://dalbycc-college.boxofbooks.io/",
+      "icon_src": "webp/boxofbooks.webp",
+      "label": "Box of Books",
+      "only": [
+        "dalby"
+      ]
+    },
+    {
+      "id": "boxofbooks-endcc",
+      "href": "https://endeavourc-college.boxofbooks.io/",
+      "icon_src": "webp/boxofbooks.webp",
+      "label": "Box of Books",
+      "only": [
+        "endeavour"
+      ]
+    },
+    {
+      "id": "boxofbooks-grocc",
+      "href": "https://groves-college.boxofbooks.io/",
+      "icon_src": "webp/boxofbooks.webp",
+      "label": "Box of Books",
+      "only": [
+        "groves"
+      ]
+    },
+    {
+      "id": "boxofbooks-livcc",
+      "href": "https://livingstone-college.boxofbooks.io/",
+      "icon_src": "webp/boxofbooks.webp",
+      "label": "Box of Books",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
+      "id": "boxofbooks-seacc",
+      "href": "https://seaview-college.boxofbooks.io/",
+      "icon_src": "webp/boxofbooks.webp",
+      "label": "Box of Books",
+      "only": [
+        "seaview"
+      ]
+    },
+    {
+      "id": "boxofbooks-stamc",
+      "href": "https://staines-college.boxofbooks.io/",
+      "icon_src": "webp/boxofbooks.webp",
+      "label": "Box of Books",
+      "only": [
+        "staines"
+      ]
+    },
+    {
+      "id": "boxofbooks-tlcc",
+      "href": "https://thelakescc-college.boxofbooks.io/",
+      "icon_src": "webp/boxofbooks.webp",
+      "label": "Box of Books",
+      "only": [
+        "thelakes"
+      ]
+    },
+    {
+      "id": "boxofbooks-warcc",
+      "href": "https://warwickcc-college.boxofbooks.io/",
+      "icon_src": "webp/boxofbooks.webp",
+      "label": "Box of Books",
+      "only": [
+        "warwick"
       ]
     },
     {
       "id": "britannica",
       "href": "https://school.eb.com.au/login?accessId=ccmschools&passcode=ls4114",
-      "icon": "Brit",
+      "icon_src": "svg/britannica.svg",
       "label": "Britannica Encyclopedia"
     },
     {
       "id": "canva",
       "href": "https://www.canva.com/login/sso/22539109-c489-451e-9ebf-8806a6c73785",
-      "icon_src": "svg/learner-link.svg",
+      "icon_src": "svg/canva.svg",
       "label": "Canva"
     },
     {
       "id": "clickview",
       "href": "https://saml-in4.clickview.com.au/Shibboleth.sso/ADM1069839",
-      "icon_src": "webp/ClickView.webp",
+      "icon_src": "svg/clickview.svg",
       "label": "ClickView Video Library"
+    },
+    {
+      "id": "edumate-bccc",
+      "href": "https://blakescrossing.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "blakescrossing"
+      ]
+    },
+    {
+      "id": "edumate-chicc",
+      "href": "https://chinchillacc.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "chinchilla"
+      ]
+    },
+    {
+      "id": "edumate-corcc",
+      "href": "https://cornerstone.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "cornerstone"
+      ]
+    },
+    {
+      "id": "edumate-dalcc",
+      "href": "https://dalbycc-college.boxofbooks.io/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "dalby"
+      ]
+    },
+    {
+      "id": "edumate-duncc",
+      "href": "https://dunsborough.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "dunsborough"
+      ]
+    },
+    {
+      "id": "edumate-endcc",
+      "href": "https://endeavourcc.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "endeavour"
+      ]
+    },
+    {
+      "id": "edumate-grocc",
+      "href": "https://groves.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "groves"
+      ]
+    },
+    {
+      "id": "edumate-livcc",
+      "href": "https://livingstone.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
+      "id": "edumate-rivcc",
+      "href": "https://riverscc.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "rivers"
+      ]
+    },
+    {
+      "id": "edumate-seacc",
+      "href": "https://seaviewcc.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "seaview"
+      ]
+    },
+    {
+      "id": "edumate-stamc",
+      "href": "https://staines.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "staines"
+      ]
+    },
+    {
+      "id": "edumate-tlcc",
+      "href": "https://thelakescc.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "thelakes"
+      ]
+    },
+    {
+      "id": "edumate-warcc",
+      "href": "https://warwickcc.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "warwick"
+      ]
+    },
+    {
+      "id": "edumate-whicc",
+      "href": "https://whitsunday.edumate.net.au/",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "only": [
+        "whitsunday"
+      ]
+    },
+    {
+      "id": "facts-bricc",
+      "href": "https://bcc.factsmgt.com.au/",
+      "icon_src": "webp/Logo-Facts.webp",
+      "label": "FACTS",
+      "only": [
+        "brindabella"
+      ]
+    },
+    {
+      "id": "facts-hopcc",
+      "href": "https://hopecc.factsmgt.com.au/Pages/Login.aspx",
+      "icon_src": "webp/PCSchool.webp",
+      "label": "Spider",
+      "only": [
+        "hope"
+      ]
+    },
+    {
+      "id": "itcthinkdrive",
+      "href": "https://app.itcthinkdrive.com.au/",
+      "icon_src": "webp/itcthinkdrive.webp",
+      "label": "ITC ThinkDrive"
+    },
+    {
+      "id": "learnerlink",
+      "href": "http://learnerlink.instructure.com/login/saml",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Staff & Students)",
+      "bg": "#2c497e"
+    },
+    {
+      "id": "mathletics",
+      "href": "https://login.mathletics.com/",
+      "icon_src": "svg/mathletics.svg",
+      "label": "Mathletics",
+      "exclude": [
+        "brindabella",
+        "livingstone"
+      ]
+    },
+    {
+      "id": "mathspace",
+      "href": "https://mathspace.co/accounts/login/",
+      "icon_src": "svg/mathspace.svg",
+      "label": "MathSpace",
+      "only": [
+        "LIVCC"
+      ]
+    },
+    {
+      "id": "onedrive",
+      "href": "https://ccmschools-my.sharepoint.com/",
+      "icon_src": "svg/onedrive.svg",
+      "label": "OneDrive Documents"
+    },
+    {
+      "id": "outlook",
+      "href": "https://outlook.cloud.microsoft/mail",
+      "icon_src": "svg/outlook.svg",
+      "label": "Outlook Webmail"
+    },
+    {
+      "id": "securityinfo",
+      "href": "https://mysignins.microsoft.com/security-info",
+      "icon_src": "svg/password-svgrepo-com.svg",
+      "label": "Manage My Password",
+      "exclude": [
+        "BRICC",
+        "HOPCC"
+      ]
     }
   ],
   "training": [

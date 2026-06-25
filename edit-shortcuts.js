@@ -177,9 +177,12 @@ const PAGE = `<!DOCTYPE html>
   label.fld { display:block; font-size:12px; color:#555; margin:0 0 3px; }
   select, input[type=text] { width:100%; padding:6px 8px; border:1px solid var(--border); border-radius:4px; font:inherit; }
   #list { flex:1; overflow:auto; border-top:1px solid var(--border); margin-top:8px; }
-  #list .item { padding:7px 12px; cursor:pointer; border-bottom:1px solid #eee; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  #list .item { padding:7px 12px; cursor:pointer; border-bottom:1px solid #eee; overflow:hidden; }
   #list .item:hover { background:#eef4fb; }
   #list .item.sel { background:var(--accent); color:#fff; }
+  #list .item .id { display:block; font-size:11px; color:#999; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  #list .item .lbl { display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  #list .item.sel .id { color:#cfe1f5; }
   #leftbtns { display:flex; gap:4px; padding:8px; border-top:1px solid var(--border); }
   #leftbtns button { flex:1; padding:6px 4px; border:1px solid var(--border); background:#fff; border-radius:4px; cursor:pointer; }
   #leftbtns button.narrow { flex:0 0 38px; }
@@ -355,7 +358,16 @@ function renderList() {
   items.forEach((it, i) => {
     const div = document.createElement("div");
     div.className = "item" + (i === curIndex ? " sel" : "");
-    div.textContent = it.label || it.id || "(untitled)";
+    if (it.id) {
+      const idEl = document.createElement("span");
+      idEl.className = "id";
+      idEl.textContent = it.id;
+      div.append(idEl);
+    }
+    const lblEl = document.createElement("span");
+    lblEl.className = "lbl";
+    lblEl.textContent = it.label || it.id || "(untitled)";
+    div.append(lblEl);
     div.onclick = () => selectItem(i);
     list.append(div);
   });
