@@ -39,13 +39,13 @@ function listIconFiles() {
 }
 
 // Re-serialise an entry keeping a stable key order and dropping empties.
-const KEY_ORDER = ["id", "href", "icon", "icon_src", "label", "bg", "only", "exclude"];
+const KEY_ORDER = ["id", "href", "icon", "icon_src", "label", "bg", "only", "exclude", "groups"];
 function normaliseEntry(raw) {
   const out = {};
   for (const key of KEY_ORDER) {
     if (!(key in raw)) continue;
     let v = raw[key];
-    if (key === "only" || key === "exclude") {
+    if (key === "only" || key === "exclude" || key === "groups") {
       v = Array.isArray(v) ? v.filter((x) => `${x}`.trim() !== "") : [];
       if (v.length) out[key] = v;
     } else {
@@ -171,6 +171,8 @@ const PAGE = `<!DOCTYPE html>
   header { background:#22325d; color:#fff; padding:10px 16px; font-size:16px; font-weight:600; display:flex; align-items:center; justify-content:space-between; }
   #save { background:var(--green); color:#fff; border:none; padding:8px 16px; border-radius:4px; font-size:14px; cursor:pointer; }
   #save:disabled { opacity:.55; cursor:default; }
+  #reload { background:transparent; color:#fff; border:1px solid rgba(255,255,255,.4); padding:8px 14px; border-radius:4px; font-size:14px; cursor:pointer; margin-right:8px; }
+  #reload:hover { background:rgba(255,255,255,.15); }
   main { flex:1; display:flex; min-height:0; }
   #left { width:300px; border-right:1px solid var(--border); display:flex; flex-direction:column; background:#fafafa; }
   #left .pad { padding:10px; }
@@ -209,11 +211,18 @@ const PAGE = `<!DOCTYPE html>
 <body>
 <header>
   <span>AppLauncher Shortcuts Editor</span>
-  <button id="save" disabled>Save All to shortcuts.json</button>
+  <div>
+    <button id="reload">&#8635; Reload</button>
+    <button id="save" disabled>Save All to shortcuts.json</button>
+  </div>
 </header>
 <main>
   <div id="left">
     <div class="pad">
+      <label class="fld" for="group">Group</label>
+      <select id="group"></select>
+    </div>
+    <div class="pad" style="padding-top:4px">
       <label class="fld" for="section">Section</label>
       <select id="section"></select>
     </div>
@@ -275,6 +284,14 @@ const PAGE = `<!DOCTYPE html>
       </div>
       <p class="hint" id="unitsHint">Only / Exclude apply to school sections. Don't set both.</p>
 
+      <div id="groupsWrap" class="hidden">
+        <fieldset>
+          <legend>Sub-group</legend>
+          <p class="hint" style="margin:0 0 6px">Leave unchecked to appear in all sub-tabs for units with primary/secondary splits.</p>
+          <div id="groupsList" class="checklist"></div>
+        </fieldset>
+      </div>
+
       <button id="apply">Apply Changes</button>
     </div>
     <div id="placeholder" class="empty">Select a shortcut on the left, or click <b>+ Add</b> to create a new one.</div>
@@ -304,28 +321,14 @@ function init(data) {
   DATA = data;
   unitCodes = data.units.map((u) => u.code).sort();
 
-  const sel = $("section");
-  sel.innerHTML = "";
-  const known = new Set();
-  for (const s of data.sections) {
-    sel.append(new Option(s.label + "  [" + s.id + "]", s.id));
-    known.add(s.id);
-  }
-  // Any section present in shortcuts.json but missing from sections.json
-  for (const key of Object.keys(data.shortcuts)) {
-    if (!known.has(key)) { sel.append(new Option(key + "  [" + key + "]", key)); }
-  }
-
   $("iconlist").innerHTML = "";
   for (const f of data.iconFiles) $("iconlist").append(new Option(f));
 
-  // Build unit checklists once
   buildChecklist("onlyList", "only");
   buildChecklist("excludeList", "exclude");
+  buildGroupsChecklist();
 
-  curSection = sel.value;
-  renderList();
-  selectSection();
+  buildGroupsAndSections();
 }
 
 function buildChecklist(containerId, name) {
@@ -338,6 +341,32 @@ function buildChecklist(containerId, name) {
     cb.value = code;
     cb.dataset.group = name;
     lbl.append(cb, document.createTextNode(" " + code));
+    box.append(lbl);
+  }
+}
+
+function collectGroupValues() {
+  const vals = new Set();
+  for (const unit of DATA.units) {
+    for (const splits of Object.values(unit.sectionSplits || {})) {
+      for (const sub of splits) {
+        for (const g of (sub.groups || [])) vals.add(g);
+      }
+    }
+  }
+  return [...vals].sort();
+}
+
+function buildGroupsChecklist() {
+  const box = $("groupsList");
+  box.innerHTML = "";
+  for (const g of collectGroupValues()) {
+    const lbl = document.createElement("label");
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.value = g;
+    cb.dataset.group = "groups";
+    lbl.append(cb, document.createTextNode(" " + g));
     box.append(lbl);
   }
 }
@@ -384,6 +413,52 @@ function updateUnitState() {
   $("unitsHint").textContent = on
     ? "Only / Exclude apply to school sections. Don't set both."
     : "Only / Exclude are not used for this (non-school) section.";
+  $("groupsWrap").classList.toggle("hidden", !on || collectGroupValues().length === 0);
+}
+
+function buildGroupsAndSections() {
+  const groupSel = $("group");
+  groupSel.innerHTML = "";
+
+  const seen = new Set();
+  const groupOrder = [];
+  for (const s of DATA.sections) {
+    const tag = (s.only && s.only[0]) || "__other__";
+    if (!seen.has(tag)) { seen.add(tag); groupOrder.push(tag); }
+  }
+  const knownIds = new Set(DATA.sections.map((s) => s.id));
+  const hasOrphans = Object.keys(DATA.shortcuts).some((k) => !knownIds.has(k));
+  if (hasOrphans) groupOrder.push("__orphan__");
+
+  const groupLabel = (g) =>
+    g === "school" ? "Schools" :
+    g === "ccm-internal" ? "CCM Internal" :
+    g === "__other__" ? "Other" :
+    g === "__orphan__" ? "Unknown" :
+    g.charAt(0).toUpperCase() + g.slice(1);
+
+  for (const g of groupOrder) groupSel.append(new Option(groupLabel(g), g));
+
+  updateSections();
+}
+
+function updateSections() {
+  const curGroup = $("group").value;
+  const sel = $("section");
+  sel.innerHTML = "";
+
+  const knownIds = new Set(DATA.sections.map((s) => s.id));
+  for (const s of DATA.sections) {
+    const tag = (s.only && s.only[0]) || "__other__";
+    if (tag === curGroup) sel.append(new Option(s.label + "  [" + s.id + "]", s.id));
+  }
+  if (curGroup === "__orphan__") {
+    for (const key of Object.keys(DATA.shortcuts)) {
+      if (!knownIds.has(key)) sel.append(new Option(key + "  [" + key + "]", key));
+    }
+  }
+
+  selectSection();
 }
 
 function setChecks(group, values) {
@@ -408,6 +483,7 @@ function loadItem(it) {
   syncIconType();
   setChecks("only", it.only);
   setChecks("exclude", it.exclude);
+  setChecks("groups", it.groups);
 }
 
 function clearForm() {
@@ -417,6 +493,7 @@ function clearForm() {
   syncIconType();
   setChecks("only", []);
   setChecks("exclude", []);
+  setChecks("groups", []);
 }
 
 function selectItem(i) {
@@ -484,8 +561,10 @@ function applyChanges() {
   if (isSchool(curSection)) {
     const only = getChecks("only");
     const excl = getChecks("exclude");
+    const grps = getChecks("groups");
     if (only.length) item.only = only;
     if (excl.length) item.exclude = excl;
+    if (grps.length) item.groups = grps;
   }
 
   if (!DATA.shortcuts[curSection]) DATA.shortcuts[curSection] = [];
@@ -506,6 +585,7 @@ function applyChanges() {
 }
 
 // ---- button wiring ----
+$("group").onchange = updateSections;
 $("section").onchange = selectSection;
 
 $("add").onclick = () => {
@@ -565,6 +645,11 @@ $("save").onclick = async () => {
     if (out.ok) { setDirty(false); setStatus("Saved successfully at " + new Date().toLocaleTimeString() + "."); }
     else { alert("Error saving: " + out.error); }
   } catch (err) { alert("Error saving: " + err); }
+};
+
+$("reload").onclick = () => {
+  if (dirty && !confirm("You have unsaved changes. Reload anyway and discard them?")) return;
+  fetch("/api/data").then((r) => r.json()).then((data) => { setDirty(false); init(data); setStatus("Reloaded from disk."); }).catch((err) => setStatus("Reload failed: " + err));
 };
 
 window.addEventListener("beforeunload", (e) => {

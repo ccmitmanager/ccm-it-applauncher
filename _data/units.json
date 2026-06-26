@@ -6,7 +6,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/bccc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.blakescrossing.sa.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "brindabella",
@@ -15,7 +18,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/bricc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.bcc.act.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "chinchilla",
@@ -24,7 +30,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/chicc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.chinchillacc.qld.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "cornerstone",
@@ -33,7 +42,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/corcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.cornerstone.wa.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "dalby",
@@ -42,7 +54,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/dalcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.dalbycc.qld.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "dunsborough",
@@ -51,7 +66,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/duncc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.dcc.wa.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "endeavour",
@@ -60,7 +78,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/endcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.endeavour.qld.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "groves",
@@ -69,7 +90,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/grocc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://groves.christian.college/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "hope",
@@ -78,7 +102,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/hopcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.hopecc.sa.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "livingstone",
@@ -87,7 +114,28 @@
     "accent": "#BDDFF5",
     "logo": "/logos/livcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.livingstone.qld.edu.au/",
+    "sectionSplits": {
+      "students": [
+        {
+          "id": "students-primary",
+          "label": "Primary",
+          "groups": [
+            "primary"
+          ]
+        },
+        {
+          "id": "students-secondary",
+          "label": "Secondary",
+          "groups": [
+            "secondary"
+          ]
+        }
+      ]
+    },
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "rivers",
@@ -96,7 +144,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/rivcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://rivers.christian.college/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "seaview",
@@ -105,16 +156,22 @@
     "accent": "#BDDFF5",
     "logo": "/logos/seacc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://seaview.christian.college/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "staines",
-    "name": "Staines Methodist College",
+    "name": "Staines Memorial College",
     "shortName": "Staines",
     "accent": "#BDDFF5",
     "logo": "/logos/stamc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://staines.qld.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "thelakes",
@@ -123,7 +180,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/tlcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.thelakescc.nsw.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "warwick",
@@ -132,7 +192,10 @@
     "accent": "#BDDFF5",
     "logo": "/logos/warcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.warwickcc.qld.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "whitsunday",
@@ -141,15 +204,21 @@
     "accent": "#BDDFF5",
     "logo": "/logos/whicc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["school"]
+    "logoUrl": "https://www.whitsunday.qld.edu.au/",
+    "tags": [
+      "school"
+    ]
   },
   {
     "code": "CCMIT",
     "name": "CCM IT Services",
     "shortName": "CCM IT",
     "accent": "#22325d",
-    "logo": "/style/ccm-logo.png",
+    "logo": "/logos/ccm-logo.png",
     "collegeAppsUrl": "https://ccmschools.app/go/",
-    "tags": ["ccm-internal"]
+    "logoUrl": "https://www.ccmschools.edu.au/",
+    "tags": [
+      "ccm-internal"
+    ]
   }
 ]

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Staines Methodist College – Staff Apps</title>
+  <title>Staines Memorial College – Staff Apps</title>
   <link rel="apple-touch-icon" sizes="180x180" href="../style/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../style/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../style/favicon-16x16.png">
@@ -57,19 +57,16 @@
   </nav>
 
   <div class="logo-wrap">
-    <img src="/logos/stamc.webp" alt="Staines Methodist College">
+    <a href="https://staines.qld.edu.au/" target="_blank" rel="noopener"><img src="/logos/stamc.webp" alt="Staines Memorial College"></a>
   </div>
 
   <div class="filter-row" role="tablist" aria-label="Content category">
     <button class="f-btn active" role="tab" aria-selected="true" data-target="grid-students">Students</button>
+    <button class="f-btn" role="tab" aria-selected="false" data-target="grid-pandc">Parents &amp; Carers</button>
   </div>
 
   <main class="grid-wrap">
     <div class="grid active" id="grid-students" role="tabpanel">
-      <a href="https://my.amplify.com/" class="g-item">
-        <div class="g-icon" style="background-color:#BDDFF5"><img src="/icons/svg/amplify.svg" alt="Amplify"></div>
-        <div class="g-label">Amplify</div>
-      </a>
       <a href="https://staines-college.boxofbooks.io/" class="g-item">
         <div class="g-icon" style="background-color:#BDDFF5"><img src="/icons/webp/boxofbooks.webp" alt="Box of Books" class="inset"></div>
         <div class="g-label">Box of Books</div>
@@ -121,6 +118,13 @@
       <a href="https://outlook.cloud.microsoft/mail" class="g-item">
         <div class="g-icon" style="background-color:#BDDFF5"><img src="/icons/svg/outlook.svg" alt="Outlook Webmail"></div>
         <div class="g-label">Outlook Webmail</div>
+      </a>
+    </div>
+
+    <div class="grid" id="grid-pandc" role="tabpanel">
+      <a href="https://orbitcarerapp.edumate.com.au/staines" class="g-item">
+        <div class="g-icon" style="background-color:#BDDFF5"><img src="/icons/svg/smartphone-2.svg" alt="CarerOrbit App"></div>
+        <div class="g-label">CarerOrbit App</div>
       </a>
     </div>
   </main>

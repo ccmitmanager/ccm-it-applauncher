@@ -313,6 +313,125 @@
       "bg": "#BDDFF5"
     }
   ],
+  "pandc": [
+    {
+      "id": "carerorbit-bccc",
+      "href": "https://orbitcarerapp.edumate.com.au/blakes",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "blakescrossing"
+      ]
+    },
+    {
+      "id": "carerorbit-chicc",
+      "href": "https://orbitcarerapp.edumate.com.au/chinch",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "chinchilla"
+      ]
+    },
+    {
+      "id": "carerorbit-corcc",
+      "href": "https://orbitcarerapp.edumate.com.au/cstone",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "cornerstone"
+      ]
+    },
+    {
+      "id": "carerorbit-dalcc",
+      "href": "https://orbitcarerapp.edumate.com.au/dalby",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "dalby"
+      ]
+    },
+    {
+      "id": "carerorbit-duncc",
+      "href": "https://orbitcarerapp.edumate.com.au/dunsb",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "dunsborough"
+      ]
+    },
+    {
+      "id": "carerorbit-endcc",
+      "href": "https://orbitcarerapp.edumate.com.au/endeav",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "endeavour"
+      ]
+    },
+    {
+      "id": "carerorbit-grocc",
+      "href": "https://orbitcarerapp.edumate.com.au/groves",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "groves"
+      ]
+    },
+    {
+      "id": "carerorbit-livcc",
+      "href": "https://orbitcarerapp.edumate.com.au/livingst",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
+      "id": "carerorbit-seacc",
+      "href": "https://orbitcarerapp.edumate.com.au/seaview",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "seaview"
+      ]
+    },
+    {
+      "id": "carerorbit-stamc",
+      "href": "https://orbitcarerapp.edumate.com.au/staines",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "staines"
+      ]
+    },
+    {
+      "id": "carerorbit-tlcc",
+      "href": "https://orbitcarerapp.edumate.com.au/thelakes",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "thelakes"
+      ]
+    },
+    {
+      "id": "carerorbit-warcc",
+      "href": "https://orbitcarerapp.edumate.com.au/warwick",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "warwick"
+      ]
+    },
+    {
+      "id": "carerorbit-whicc",
+      "href": "https://orbitcarerapp.edumate.com.au/whitsun",
+      "icon_src": "svg/smartphone-2.svg",
+      "label": "CarerOrbit App",
+      "only": [
+        "whitsunday"
+      ]
+    }
+  ],
   "students": [
     {
       "id": "accessit-dalcc",
@@ -345,7 +464,13 @@
       "id": "amplify",
       "href": "https://my.amplify.com/",
       "icon_src": "svg/amplify.svg",
-      "label": "Amplify"
+      "label": "Amplify",
+      "only": [
+        "livingstone"
+      ],
+      "groups": [
+        "primary"
+      ]
     },
     {
       "id": "boxofbooks-bccc",
@@ -370,7 +495,6 @@
       "href": "https://dalbycc-college.boxofbooks.io/",
       "icon_src": "webp/boxofbooks.webp",
       "label": "Box of Books",
-      "bg": "#cc0033",
       "only": [
         "dalby"
       ]
@@ -400,6 +524,9 @@
       "label": "Box of Books",
       "only": [
         "livingstone"
+      ],
+      "groups": [
+        "secondary"
       ]
     },
     {
@@ -492,6 +619,9 @@
       "label": "EdAlive",
       "only": [
         "livingstone"
+      ],
+      "groups": [
+        "primary"
       ]
     },
     {
@@ -627,6 +757,9 @@
       "label": "Epic",
       "only": [
         "livingstone"
+      ],
+      "groups": [
+        "primary"
       ]
     },
     {
@@ -654,6 +787,9 @@
       "label": "Firefly Online",
       "only": [
         "livingstone"
+      ],
+      "groups": [
+        "primary"
       ]
     },
     {
@@ -676,6 +812,9 @@
       "label": "Literacy Planet",
       "only": [
         "livingstone"
+      ],
+      "groups": [
+        "primary"
       ]
     },
     {
@@ -695,6 +834,9 @@
       "label": "MathSeeds",
       "only": [
         "livingstone"
+      ],
+      "groups": [
+        "primary"
       ]
     },
     {
@@ -704,6 +846,9 @@
       "label": "MathSpace",
       "only": [
         "livingstone"
+      ],
+      "groups": [
+        "primary"
       ]
     },
     {
@@ -713,6 +858,9 @@
       "label": "Matific",
       "only": [
         "livingstone"
+      ],
+      "groups": [
+        "primary"
       ]
     },
     {
@@ -808,6 +956,9 @@
       "label": "Reading Eggs",
       "only": [
         "livingstone"
+      ],
+      "groups": [
+        "primary"
       ]
     },
     {
@@ -836,6 +987,9 @@
       "label": "Study Ladder",
       "only": [
         "livingstone"
+      ],
+      "groups": [
+        "primary"
       ]
     }
   ],

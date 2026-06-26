@@ -94,7 +94,7 @@ function renderItem(sc, accent) {
   return `
       <a href="${esc(sc.href)}" class="g-item">
         ${renderIcon(sc, accent)}
-        <div class="g-label">${esc(sc.label)}</div>
+        <div class="g-label">${sc.label.split('|').map(esc).join('<br>')}</div>
       </a>`;
 }
 
@@ -217,24 +217,39 @@ const PAGE_SCRIPT = `  <script>
 // ── Page builder ───────────────────────────────────────────────────────────
 function buildPage(unit) {
   const unitShortcuts = shortcuts.filter(sc => visibleOn(sc, unit.code));
-  const activeSections = sections.filter(s =>
-    sectionVisibleFor(s, unit) && unitShortcuts.some(sc => sc.grid === s.id)
-  );
+  const splits = unit.sectionSplits || {};
 
-  if (activeSections.length === 0) {
+  const effectiveSections = [];
+  for (const s of sections) {
+    if (!sectionVisibleFor(s, unit)) continue;
+    if (splits[s.id]) {
+      for (const sub of splits[s.id]) {
+        const items = unitShortcuts.filter(sc =>
+          sc.grid === s.id &&
+          (!sc.groups || sc.groups.length === 0 || sc.groups.some(g => sub.groups.includes(g)))
+        );
+        if (items.length > 0) effectiveSections.push({ id: sub.id, label: sub.label, items });
+      }
+    } else {
+      const items = unitShortcuts.filter(sc => sc.grid === s.id);
+      if (items.length > 0) effectiveSections.push({ id: s.id, label: s.label, items });
+    }
+  }
+
+  if (effectiveSections.length === 0) {
     console.warn(`  [WARN] ${unit.code}: no shortcuts found — skipping`);
     return null;
   }
 
-  const filterButtons = activeSections.map((s, i) =>
+  const filterButtons = effectiveSections.map((s, i) =>
     `    <button class="f-btn${i === 0 ? ' active' : ''}" role="tab" ` +
     `aria-selected="${i === 0 ? 'true' : 'false'}" ` +
     `data-target="grid-${s.id}">${esc(s.label)}</button>`
   ).join('\n');
 
-  const grids = activeSections.map((s, i) => {
-    const items = unitShortcuts
-      .filter(sc => sc.grid === s.id)
+  const grids = effectiveSections.map((s, i) => {
+    const items = s.items
+      .slice()
       .sort((a, b) => a.label.localeCompare(b.label))
       .map(sc => renderItem(sc, unit.accent))
       .join('');
@@ -280,10 +295,12 @@ function buildPage(unit) {
   </nav>
 
   <div class="logo-wrap">
-    <img src="${esc(root + unit.logo.replace(/^\//, ''))}" alt="${esc(unit.name)}">
+    ${unit.logoUrl
+      ? `<a href="${esc(unit.logoUrl)}" target="_blank" rel="noopener"><img src="${esc(root + unit.logo.replace(/^\//, ''))}" alt="${esc(unit.name)}"></a>`
+      : `<img src="${esc(root + unit.logo.replace(/^\//, ''))}" alt="${esc(unit.name)}">`}
   </div>
 
-  <div class="filter-row" role="tablist" aria-label="Content category">
+  <div class="filter-row"${effectiveSections.length === 1 ? ' style="display:none"' : ''} role="tablist" aria-label="Content category">
 ${filterButtons}
   </div>
 
