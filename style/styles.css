@@ -6,6 +6,7 @@
   --topbar-text: #ffffff;
   --accent:      #2260a5;
   --grid-gap:    14px;
+  --cell-scale:  0.9;       /* grid cells 10% smaller; gap stays --grid-gap */
   --sq-radius:   12%;        /* squircle horizontal radius  */
   --sq-radius-v: 9.6%;     /* vertical = 15% × (4/5) keeps corners equal px */
   --page-max:    1080px;
@@ -222,7 +223,15 @@ body {
 
 .grid {
   display: none;
-  grid-template-columns: repeat(2, 1fr);
+  --cols: 2;
+  /* Cell tracks are scaled down (90% of a 1fr cell); same gap as before.
+     justify-content centers the grid so the freed space goes to the
+     outer margins, NOT into the gaps between items. */
+  grid-template-columns: repeat(
+    var(--cols),
+    calc((100% - (var(--cols) - 1) * var(--grid-gap)) * var(--cell-scale) / var(--cols))
+  );
+  justify-content: center;
   gap: var(--grid-gap);
   max-width: var(--page-max);
   margin: 0 auto;
@@ -231,10 +240,10 @@ body {
 .grid.active { display: grid; }
 
 /* Responsive — max 6 columns */
-@media (min-width: 400px) { .grid { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 560px) { .grid { grid-template-columns: repeat(4, 1fr); } }
-@media (min-width: 720px) { .grid { grid-template-columns: repeat(5, 1fr); } }
-@media (min-width: 880px) { .grid { grid-template-columns: repeat(6, 1fr); } }
+@media (min-width: 400px) { .grid { --cols: 3; } }
+@media (min-width: 560px) { .grid { --cols: 4; } }
+@media (min-width: 720px) { .grid { --cols: 5; } }
+@media (min-width: 880px) { .grid { --cols: 6; } }
 
 /* =====================================================
    Grid Item  (squircle, 4:5 ratio, linked)

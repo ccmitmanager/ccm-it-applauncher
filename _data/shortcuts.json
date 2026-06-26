@@ -342,6 +342,12 @@
       ]
     },
     {
+      "id": "amplify",
+      "href": "https://my.amplify.com/",
+      "icon_src": "svg/amplify.svg",
+      "label": "Amplify"
+    },
+    {
       "id": "boxofbooks-bccc",
       "href": "https://blakescrossing-college.boxofbooks.io",
       "icon_src": "webp/boxofbooks.webp",
@@ -364,6 +370,7 @@
       "href": "https://dalbycc-college.boxofbooks.io/",
       "icon_src": "webp/boxofbooks.webp",
       "label": "Box of Books",
+      "bg": "#cc0033",
       "only": [
         "dalby"
       ]
@@ -438,16 +445,54 @@
       "label": "Britannica Encyclopedia"
     },
     {
+      "id": "calendar-grocc",
+      "href": "https://groves.christian.college/calendar/",
+      "icon_src": "svg/calendar-alternative.svg",
+      "label": "College Calendar",
+      "only": [
+        "groves"
+      ]
+    },
+    {
       "id": "canva",
       "href": "https://www.canva.com/login/sso/22539109-c489-451e-9ebf-8806a6c73785",
       "icon_src": "svg/canva.svg",
       "label": "Canva"
     },
     {
+      "id": "careers-stamc",
+      "href": "https://www.smccareers.com/",
+      "icon_src": "svg/careers.svg",
+      "label": "Careers Information Portal",
+      "only": [
+        "staines"
+      ]
+    },
+    {
       "id": "clickview",
       "href": "https://saml-in4.clickview.com.au/Shibboleth.sso/ADM1069839",
       "icon_src": "svg/clickview.svg",
       "label": "ClickView Video Library"
+    },
+    {
+      "id": "clipboard",
+      "href": "https://go.clipboard.app/login",
+      "icon_src": "webp/clipboard.webp",
+      "label": "Clipboard",
+      "only": [
+        "brindabella",
+        "livingstone",
+        "staines"
+      ]
+    },
+    {
+      "id": "edalive",
+      "href": "https://central.edalive.com/auth/login",
+      "icon_src": "svg/edalive.svg",
+      "label": "EdAlive",
+      "only": [
+        "livingstone"
+      ]
     },
     {
       "id": "edumate-bccc",
@@ -576,6 +621,15 @@
       ]
     },
     {
+      "id": "epic",
+      "href": "https://www.getepic.com/sign-in",
+      "icon_src": "svg/epic.svg",
+      "label": "Epic",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
       "id": "facts-bricc",
       "href": "https://bcc.factsmgt.com.au/",
       "icon_src": "webp/Logo-Facts.webp",
@@ -594,6 +648,15 @@
       ]
     },
     {
+      "id": "firefly",
+      "href": "https://online.fireflyeducation.com.au/services/student_login",
+      "icon_src": "svg/firefly.svg",
+      "label": "Firefly Online",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
       "id": "itcthinkdrive",
       "href": "https://app.itcthinkdrive.com.au/",
       "icon_src": "webp/itcthinkdrive.webp",
@@ -607,6 +670,15 @@
       "bg": "#2c497e"
     },
     {
+      "id": "literacyplanet",
+      "href": "https://app.literacyplanet.com/login",
+      "icon_src": "webp/literacyplanet-alternative.webp",
+      "label": "Literacy Planet",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
       "id": "mathletics",
       "href": "https://login.mathletics.com/",
       "icon_src": "svg/mathletics.svg",
@@ -617,12 +689,30 @@
       ]
     },
     {
+      "id": "mathseeds",
+      "href": "https://mathseeds.com.au/",
+      "icon_src": "webp/mathseeds.webp",
+      "label": "MathSeeds",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
       "id": "mathspace",
       "href": "https://mathspace.co/accounts/login/",
       "icon_src": "svg/mathspace.svg",
       "label": "MathSpace",
       "only": [
-        "LIVCC"
+        "livingstone"
+      ]
+    },
+    {
+      "id": "matific",
+      "href": "https://www.matific.com/au/en-au/login-page/",
+      "icon_src": "webp/matific.webp",
+      "label": "Matific",
+      "only": [
+        "livingstone"
       ]
     },
     {
@@ -677,10 +767,57 @@
       "label": "OneDrive Documents"
     },
     {
+      "id": "onguard",
+      "href": "https://onguardv3.com.au/",
+      "icon_src": "svg/onguard.svg",
+      "label": "Onguard Safety Training",
+      "only": [
+        "endeavour",
+        "groves",
+        "whitsunday"
+      ]
+    },
+    {
       "id": "outlook",
       "href": "https://outlook.cloud.microsoft/mail",
       "icon_src": "svg/outlook.svg",
       "label": "Outlook Webmail"
+    },
+    {
+      "id": "oxford",
+      "href": "https://www.oxfordlearnersdictionaries.com/",
+      "icon_src": "svg/oxford.svg",
+      "label": "Oxford Dictionaries",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
+      "id": "pat-livcc",
+      "href": "https://oars.acer.edu.au/livingstone-christian-college",
+      "icon_src": "svg/acer-pat.svg",
+      "label": "Progressive Achievement Testing",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
+      "id": "readingeggs",
+      "href": "http://app.readingeggs.com/login",
+      "icon_src": "svg/readingeggs.svg",
+      "label": "Reading Eggs",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
+      "id": "schoolbox-bricc",
+      "href": "https://schoolbox.bcc.act.edu.au/",
+      "icon_src": "svg/schoolbox.svg",
+      "label": "SchoolBox",
+      "only": [
+        "brindabella"
+      ]
     },
     {
       "id": "securityinfo",
@@ -688,8 +825,17 @@
       "icon_src": "svg/password-svgrepo-com.svg",
       "label": "Manage My Password",
       "exclude": [
-        "BRICC",
-        "HOPCC"
+        "brindabella",
+        "hope"
+      ]
+    },
+    {
+      "id": "studyladder",
+      "href": "https://www.studyladder.com.au/login/account",
+      "icon_src": "webp/studyladder.webp",
+      "label": "Study Ladder",
+      "only": [
+        "livingstone"
       ]
     }
   ],
