@@ -17,7 +17,10 @@
       "id": "cia",
       "href": "https://ccm.t1cloud.com/",
       "icon_src": "svg/cianywhere.svg",
-      "label": "Ci Anywhere"
+      "label": "Ci Anywhere",
+      "also": [
+        "general"
+      ]
     },
     {
       "id": "clickview",
@@ -29,13 +32,19 @@
       "id": "codetwo-admin",
       "href": "https://app.codetwo.com/",
       "icon_src": "svg/codetwo.svg",
-      "label": "CodeTwo Email Signatures Management"
+      "label": "CodeTwo Email Signatures Management",
+      "also": [
+        "schooladmin"
+      ]
     },
     {
       "id": "docs",
       "href": "https://docs.ccmschools.app/",
       "icon_src": "svg/ic_fluent_book_48_color.svg",
-      "label": "Corporate Systems Documentation"
+      "label": "Corporate Systems Documentation",
+      "also": [
+        "staffsupport"
+      ]
     },
     {
       "id": "edumate",
@@ -45,10 +54,13 @@
     },
     {
       "id": "edval",
-      "href": "https://www.edval.education/",
+      "href": "https://ccmschools.app/go/edval",
       "icon_src": "webp/edval.webp",
       "label": "Edval Timetabler",
-      "bg": "#BDDFF5"
+      "bg": "#BDDFF5",
+      "also": [
+        "schooladmin"
+      ]
     },
     {
       "id": "learnerlink",
@@ -75,14 +87,18 @@
         "whitsunday"
       ],
       "also": [
-        "pandc"
+        "pandc",
+        "schooladmin"
       ]
     },
     {
       "id": "trackone",
       "href": "https://ccmschools.app/go/trackone/",
       "icon_src": "webp/trackone.webp",
-      "label": "TrackOne Student Analytics"
+      "label": "TrackOne Student Analytics",
+      "also": [
+        "edresources"
+      ]
     }
   ],
   "ccm-t2-services": [
@@ -108,9 +124,159 @@
     {
       "id": "senso",
       "href": "https://app.senso.cloud/admin-centre",
-      "icon_src": "svg/senso.svg",
+      "icon_src": "svg/cloud.svg",
       "label": "Senso Class.Cloud Admin",
       "bg": "#BDDFF5"
+    }
+  ],
+  "edresources": [
+    {
+      "id": "senso",
+      "href": "https://app.senso.cloud/",
+      "icon_src": "svg/cloud.svg",
+      "label": "Senso Device Monitoring"
+    },
+    {
+      "id": "seqta",
+      "href": "https://ta.hopecc.sa.edu.au/",
+      "icon_src": "webp/SEQTA.webp",
+      "label": "SEQTA (Hope only)"
+    },
+    {
+      "id": "thinkingmode",
+      "href": "https://thinkingmode.com/login/",
+      "icon_src": "webp/ThinkingMode.webp",
+      "label": "ThinkingMode"
+    }
+  ],
+  "edumate": [
+    {
+      "id": "edumate-bccc",
+      "href": "https://blakescrossing.edumate.net.au/",
+      "icon_src": "webp/logos/bccc.webp",
+      "label": "Blakes Crossing Christian College"
+    },
+    {
+      "id": "edumate-chicc",
+      "href": "https://chinchillacc.edumate.net.au/",
+      "icon_src": "webp/logos/chicc.webp",
+      "label": "Chinchilla Christian College"
+    },
+    {
+      "id": "edumate-corcc",
+      "href": "https://cornerstone.edumate.net.au/",
+      "icon_src": "webp/logos/corcc.webp",
+      "label": "Cornerstone Christian College"
+    },
+    {
+      "id": "edumate-dalcc",
+      "href": "https://dalbycc.edumate.net.au/",
+      "icon_src": "webp/logos/dalcc.webp",
+      "label": "Dalby Christian College"
+    },
+    {
+      "id": "edumate-duncc",
+      "href": "https://dunsborough.edumate.net.au/",
+      "icon_src": "webp/logos/duncc.webp",
+      "label": "Dunsborough Christian College"
+    },
+    {
+      "id": "edumate-endcc",
+      "href": "https://endeavourcc.edumate.net.au/",
+      "icon_src": "webp/logos/endcc.webp",
+      "label": "Endeavour Christian College"
+    },
+    {
+      "id": "edumate-grocc",
+      "href": "https://groves.edumate.net.au/",
+      "icon_src": "webp/logos/grocc.webp",
+      "label": "Groves Christian College"
+    },
+    {
+      "id": "edumate-livcc",
+      "href": "https://livingstone.edumate.net.au/",
+      "icon_src": "webp/logos/livcc.webp",
+      "label": "Livingstone Christian College"
+    },
+    {
+      "id": "edumate-rivcc",
+      "href": "https://riverscc.edumate.net.au/",
+      "icon_src": "webp/logos/rivcc.webp",
+      "label": "Rivers Christian College"
+    },
+    {
+      "id": "edumate-seacc",
+      "href": "https://seaviewcc.edumate.net.au/",
+      "icon_src": "webp/logos/seacc.webp",
+      "label": "Seaview Christian College"
+    },
+    {
+      "id": "edumate-stamc",
+      "href": "https://staines.edumate.net.au/",
+      "icon_src": "webp/logos/stamc.webp",
+      "label": "Staines Memorial College"
+    },
+    {
+      "id": "edumate-tlcc",
+      "href": "https://thelakescc.edumate.net.au/",
+      "icon_src": "webp/logos/tlcc.webp",
+      "label": "The Lakes Christian College"
+    },
+    {
+      "id": "edumate-warcc",
+      "href": "https://warwickcc.edumate.net.au/",
+      "icon_src": "webp/logos/warcc.webp",
+      "label": "Warwick Christian College"
+    },
+    {
+      "id": "edumate-whicc",
+      "href": "https://whitsunday.edumate.net.au/",
+      "icon_src": "webp/logos/whicc.webp",
+      "label": "Whitsunday Christian College"
+    }
+  ],
+  "general": [
+    {
+      "id": "3cx",
+      "href": "https://ccmschools.3cx.com.au/",
+      "icon_src": "svg/phone2.svg",
+      "label": "3CX Phone System"
+    },
+    {
+      "id": "calendar",
+      "href": "https://outlook.cloud.microsoft/calendar",
+      "icon_src": "svg/ic_fluent_calendar_48_color.svg",
+      "label": "Outlook Calendar"
+    },
+    {
+      "id": "codetwo",
+      "href": "https://user.codetwo.com/",
+      "icon_src": "webp/c2.webp",
+      "label": "CodeTwo Email Signature - My User Info"
+    },
+    {
+      "id": "edumate",
+      "href": "https://link.ccmschools.app/edumate",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information"
+    },
+    {
+      "id": "outlook",
+      "href": "https://outlook.cloud.microsoft/mail",
+      "icon_src": "svg/outlook.svg",
+      "label": "Outlook Webmail"
+    },
+    {
+      "id": "sharepoint",
+      "href": "https://ccmschools.sharepoint.com/_layouts/15/sharepoint.aspx/discover",
+      "icon_src": "svg/sharepoint.svg",
+      "label": "SharePoint Documents & News"
+    },
+    {
+      "id": "thesource",
+      "href": "https://ccmschools.sharepoint.com/sites/thesource",
+      "icon_src": "svg/thesource.svg",
+      "label": "The Source"
     }
   ],
   "ms-portals": [
@@ -160,7 +326,10 @@
       "id": "mfa",
       "href": "https://mymfa.cmd.ms",
       "icon_src": "svg/microsoftAuthenticatorMfa.svg",
-      "label": "My MFA"
+      "label": "My MFA",
+      "also": [
+        "general"
+      ]
     },
     {
       "id": "o365-admin",
@@ -228,8 +397,11 @@
     {
       "id": "busminder",
       "href": "https://ccm.busminder.com.au/school/",
-      "icon_src": "webp/BusMinder.webp",
-      "label": "BusMinder"
+      "icon_src": "webp/bus-stop.webp",
+      "label": "BusMinder",
+      "also": [
+        "schooladmin"
+      ]
     },
     {
       "id": "cmd.ms",
@@ -241,7 +413,10 @@
       "id": "enrolhq",
       "href": "https://ccmschools.app/go/enrolhq/",
       "icon_src": "webp/EnrolHQ-1.webp",
-      "label": "Enrol HQ"
+      "label": "Enrol HQ",
+      "also": [
+        "schooladmin"
+      ]
     },
     {
       "id": "facts-bcc",
@@ -249,12 +424,6 @@
       "icon_src": "webp/Logo-Facts.webp",
       "label": "FACTS (BCC)",
       "bg": "#BDDFF5"
-    },
-    {
-      "id": "it-servicedesk",
-      "href": "https://it.servicedesk.ccmschools.app/",
-      "icon_src": "svg/it-servicedesk.svg",
-      "label": "IT ServiceDesk"
     },
     {
       "id": "it-shareddocs",
@@ -272,7 +441,10 @@
       "id": "lightspeed",
       "href": "https://ccmschools.app/go/lightspeed",
       "icon_src": "svg/lightspeed.svg",
-      "label": "Lightspeed POS"
+      "label": "Lightspeed POS",
+      "also": [
+        "schooladmin"
+      ]
     },
     {
       "id": "pipsadmin",
@@ -285,6 +457,15 @@
       "href": "https://app.sendgrid.com/",
       "icon_src": "svg/sendgrid.svg",
       "label": "SendGrid"
+    },
+    {
+      "id": "servicedesk-it",
+      "href": "https://it.servicedesk.ccmschools.app/",
+      "icon_src": "svg/it-servicedesk.svg",
+      "label": "IT ServiceDesk",
+      "also": [
+        "schooladmin"
+      ]
     },
     {
       "id": "smscentral",
@@ -303,7 +484,10 @@
       "id": "spider-hcc",
       "href": "https://hopecc.factsmgt.com.au/Pages/Login.aspx",
       "icon_src": "webp/PCSchool.webp",
-      "label": "Spider (HCC)"
+      "label": "Spider (HCC)",
+      "also": [
+        "schooladmin"
+      ]
     },
     {
       "id": "st4s",
@@ -944,6 +1128,99 @@
       ]
     }
   ],
+  "schooladmin": [
+    {
+      "id": "bpoint",
+      "href": "https://www.bpoint.com.au/backoffice/",
+      "icon_src": "svg/payment-5.svg",
+      "label": "BPOINT Back Office"
+    },
+    {
+      "id": "commbiz",
+      "href": "https://www3.my.commbiz.commbank.com.au/cbp/login",
+      "icon_src": "svg/commBank-logo.svg",
+      "label": "CommBiz Banking"
+    },
+    {
+      "id": "servicedesk-facilities",
+      "href": "https://facilities.servicedesk.ccmschools.app/",
+      "icon_src": "svg/facilities.svg",
+      "label": "Facilities ServiceDesk",
+      "also": [
+        "servicerequests"
+      ]
+    },
+    {
+      "id": "servicedesk-legacy",
+      "href": "https://servicedesk.ccmschools.app/a/dashboard/default",
+      "icon_src": "svg/legacy-servicedesk.svg",
+      "label": "Legacy ServiceDesk |Agent Access"
+    }
+  ],
+  "servicerequests": [
+    {
+      "id": "request-bus",
+      "href": "https://facilities.servicedesk.ccmschools.app/Tickets/New",
+      "icon_src": "webp/bus-stop.webp",
+      "label": "Bus Operations"
+    },
+    {
+      "id": "request-hr",
+      "href": "https://corporate.servicedesk.ccmschools.app/Tickets/New?categoryId=7",
+      "icon_src": "svg/hr.svg",
+      "label": "Human Resources"
+    },
+    {
+      "id": "request-mobile",
+      "href": "https://corporate.servicedesk.ccmschools.app/Tickets/New?categoryId=11",
+      "icon_src": "svg/smartphone-1.svg",
+      "label": "Mobile Provisioning"
+    },
+    {
+      "id": "request-payroll",
+      "href": "https://corporate.servicedesk.ccmschools.app/Tickets/New?categoryId=8",
+      "icon_src": "svg/ic_fluent_coin_multiple_48_color.svg",
+      "label": "Payroll Services"
+    }
+  ],
+  "staffsupport": [
+    {
+      "id": "accounts-staff",
+      "href": "mailto:servicedesk@ccmschools.edu.au",
+      "icon_src": "svg/staff.svg",
+      "label": "Staff Accounts & Passwords"
+    },
+    {
+      "id": "support-cia",
+      "href": "https://it.servicedesk.ccmschools.app/Tickets/New?categoryId=3",
+      "icon_src": "svg/cianywhere.svg",
+      "label": "Ci Anywhere"
+    },
+    {
+      "id": "support-clickview",
+      "href": "https://it.servicedesk.ccmschools.app/Tickets/New?categoryId=4",
+      "icon_src": "svg/clickview.svg",
+      "label": "ClickView Video Library"
+    },
+    {
+      "id": "support-compass",
+      "href": "https://it.servicedesk.ccmschools.app/Tickets/New?categoryId=28",
+      "icon_src": "svg/compass.svg",
+      "label": "Compass Student Information System"
+    },
+    {
+      "id": "support-edumate",
+      "href": "https://it.servicedesk.ccmschools.app/Tickets/New?categoryId=28",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate, EnrolHQ & CarerOrbit"
+    },
+    {
+      "id": "support-teams",
+      "href": "https://ccmschools.app/go/teams-technical-support/",
+      "icon_src": "svg/teams.svg",
+      "label": "Microsoft Teams"
+    }
+  ],
   "students": [
     {
       "id": "accessit-dalcc",
@@ -1081,7 +1358,10 @@
       "id": "britannica",
       "href": "https://school.eb.com.au/login?accessId=ccmschools&passcode=ls4114",
       "icon_src": "svg/britannica.svg",
-      "label": "Britannica Encyclopedia"
+      "label": "Britannica Encyclopedia",
+      "also": [
+        "edresources"
+      ]
     },
     {
       "id": "calendar-grocc",
@@ -1099,7 +1379,10 @@
       "id": "canva",
       "href": "https://www.canva.com/login/sso/22539109-c489-451e-9ebf-8806a6c73785",
       "icon_src": "svg/canva.svg",
-      "label": "Canva"
+      "label": "Canva",
+      "also": [
+        "general"
+      ]
     },
     {
       "id": "careers-stamc",
@@ -1114,7 +1397,10 @@
       "id": "clickview",
       "href": "https://saml-in4.clickview.com.au/Shibboleth.sso/ADM1069839",
       "icon_src": "svg/clickview.svg",
-      "label": "ClickView Video Library"
+      "label": "ClickView Video Library",
+      "also": [
+        "edresources"
+      ]
     },
     {
       "id": "clipboard-bricc",
@@ -1378,14 +1664,20 @@
       "id": "itcthinkdrive",
       "href": "https://app.itcthinkdrive.com.au/",
       "icon_src": "webp/itcthinkdrive.webp",
-      "label": "ITC ThinkDrive"
+      "label": "ITC ThinkDrive",
+      "also": [
+        "edresources"
+      ]
     },
     {
       "id": "learnerlink",
       "href": "http://learnerlink.instructure.com/login/saml",
       "icon_src": "svg/learner-link-trimmed.svg",
       "label": "Learner.Link (Staff & Students)",
-      "bg": "#2c497e"
+      "bg": "#2c497e",
+      "also": [
+        "general"
+      ]
     },
     {
       "id": "literacyplanet",
@@ -1580,13 +1872,19 @@
       "id": "accounts-parents",
       "href": "https://ccm-parent-uas.paperform.co/",
       "icon_src": "svg/parents.svg",
-      "label": "Parent Accounts & Passwords"
+      "label": "Parent Accounts & Passwords",
+      "also": [
+        "staffsupport"
+      ]
     },
     {
       "id": "accounts-students",
       "href": "https://ccm-student-account.paperform.co/",
       "icon_src": "svg/student-male.svg",
-      "label": "Student Accounts & Passwords"
+      "label": "Student Accounts & Passwords",
+      "also": [
+        "staffsupport"
+      ]
     },
     {
       "id": "support-edumate",
@@ -1602,7 +1900,10 @@
       "id": "support-hardware",
       "href": "mailto:itservicedesk@ccmschools.edu.au",
       "icon_src": "svg/ic_fluent_laptop_48_color.svg",
-      "label": "College Issued Hardware"
+      "label": "College Issued Hardware",
+      "also": [
+        "staffsupport"
+      ]
     },
     {
       "id": "support-learnerlink",
@@ -1613,6 +1914,9 @@
       "exclude": [
         "brindabella",
         "hope"
+      ],
+      "also": [
+        "staffsupport"
       ]
     },
     {
@@ -1629,7 +1933,10 @@
       "id": "support-other",
       "href": "mailto:itservicedesk@ccmschools.edu.au",
       "icon_src": "svg/ic_fluent_chat_48_color.svg",
-      "label": "All Other Services"
+      "label": "All Other Services",
+      "also": [
+        "staffsupport"
+      ]
     }
   ],
   "training": [

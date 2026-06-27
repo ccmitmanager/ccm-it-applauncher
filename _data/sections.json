@@ -17,21 +17,51 @@
   {
     "id": "ms-portals",
     "label": "Microsoft Portals",
-    "only": ["ccm-internal"]
+    "only": ["ccm-it"]
   },
   {
     "id": "ccm-t1-services",
     "label": "Managed Platforms",
-    "only": ["ccm-internal"]
+    "only": ["ccm-it"]
   },
   {
     "id": "ccm-t2-services",
     "label": "Enabled Platforms",
-    "only": ["ccm-internal"]
+    "only": ["ccm-it"]
   },
   {
     "id": "other",
     "label": "Other",
-    "only": ["ccm-internal"]
+    "only": ["ccm-it"]
+  },
+  {
+    "id": "edumate",
+    "label": "Edumate",
+    "only": ["edumate"]
+  },
+  {
+    "id": "general",
+    "label": "General",
+    "only": ["stafflauncher"]
+  },
+  {
+    "id": "edresources",
+    "label": "Educational Resources",
+    "only": ["stafflauncher"]
+  },
+  {
+    "id": "schooladmin",
+    "label": "School Administration",
+    "only": ["stafflauncher"]
+  },
+  {
+    "id": "staffsupport",
+    "label": "Support",
+    "only": ["stafflauncher"]
+  },
+  {
+    "id": "servicerequests",
+    "label": "Service Requests",
+    "only": ["stafflauncher"]
   }
 ]

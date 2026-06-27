@@ -220,5 +220,29 @@
     "tags": [
       "ccm-internal"
     ]
+  },
+  {
+    "code": "edumate",
+    "name": "Edumate Student Information System",
+    "shortName": "edumate",
+    "accent": "#BDDFF5",
+    "logo": "/logos/edumate.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "logoUrl": "https://www.ccmschools.edu.au/",
+    "tags": [
+      "edumate"
+    ]
+  },
+  {
+    "code": "staff",
+    "name": "CCM Staff Apps",
+    "shortName": "CCM Staff",
+    "accent": "#BDDFF5",
+    "logo": "/logos/ccm-logo.png",
+    "collegeAppsUrl": "https://ccmschools.app/go/",
+    "logoUrl": "https://www.ccmschools.edu.au/",
+    "tags": [
+      "stafflauncher"
+    ]
   }
 ]
