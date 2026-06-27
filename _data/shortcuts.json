@@ -62,7 +62,21 @@
       "href": "https://portal.owna.com.au/",
       "icon_src": "svg/owna.svg",
       "label": "OWNA Portal",
-      "bg": "#BDDFF5"
+      "bg": "#BDDFF5",
+      "only": [
+        "brindabella",
+        "chinchilla",
+        "dalby",
+        "groves",
+        "livingstone",
+        "seaview",
+        "staines",
+        "thelakes",
+        "whitsunday"
+      ],
+      "also": [
+        "pandc"
+      ]
     },
     {
       "id": "trackone",
@@ -315,6 +329,33 @@
   ],
   "pandc": [
     {
+      "id": "booked-endcc",
+      "href": "https://bookings.parentteacheronline.com.au/Login.aspx?school=p57pt",
+      "icon_src": "webp/booked-dark.webp",
+      "label": "Parent Teacher Online",
+      "only": [
+        "endeavour"
+      ]
+    },
+    {
+      "id": "booked-stamc",
+      "href": "https://bookings.parentteacheronline.com.au/Logon2.aspx?ReturnUrl=schoolycpjs&school=ycpjs",
+      "icon_src": "webp/booked-dark.webp",
+      "label": "Parent Teacher Online",
+      "only": [
+        "staines"
+      ]
+    },
+    {
+      "id": "byod-livcc",
+      "href": "https://www.livingstone.qld.edu.au/learning/byod",
+      "icon_src": "svg/ic_fluent_laptop_48_color.svg",
+      "label": "BYOD Student Information",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
       "id": "carerorbit-bccc",
       "href": "https://orbitcarerapp.edumate.com.au/blakes",
       "icon_src": "svg/smartphone-2.svg",
@@ -429,6 +470,477 @@
       "label": "CarerOrbit App",
       "only": [
         "whitsunday"
+      ]
+    },
+    {
+      "id": "consent2go",
+      "href": "https://www.mcbschools.com/Login",
+      "icon_src": "webp/consent2go-transparent.webp",
+      "label": "Consent2Go",
+      "bg": "ghostwhite",
+      "only": [
+        "cornerstone",
+        "dunsborough"
+      ]
+    },
+    {
+      "id": "flexischools",
+      "href": "https://www.flexischools.com.au/",
+      "icon_src": "webp/flexischools.webp",
+      "label": "Flexischools",
+      "only": [
+        "chinchilla",
+        "dalby",
+        "livingstone",
+        "staines"
+      ]
+    },
+    {
+      "id": "handbook-student-stamc",
+      "href": "https://ccmschools.sharepoint.com/sites/SMC-Public2/SitePages/Student-Handbook.aspx",
+      "icon_src": "svg/handbook.svg",
+      "label": "Student Handbook",
+      "only": [
+        "staines"
+      ],
+      "also": [
+        "students"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-bccc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/243",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "blakescrossing"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-chicc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/244",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "chinchilla"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-corcc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/242",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "cornerstone"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-dalcc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/245",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "dalby"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-duncc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/246",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "dunsborough"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-endcc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/247",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "endeavour"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-grocc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/248",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "groves"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-livcc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/249",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-seacc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/250",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "seaview"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-stamc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/251",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "staines"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-tlcc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/252",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "thelakes"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-warcc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/253",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "warwick"
+      ]
+    },
+    {
+      "id": "learnerlink-parents-whicc",
+      "href": "https://learnerlink.instructure.com/login/openid_connect/254",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link (Parents & Carers)",
+      "bg": "#2c497e",
+      "only": [
+        "whitsunday"
+      ]
+    },
+    {
+      "id": "news-grocc",
+      "href": "https://groves.christian.college/day-news/",
+      "icon_src": "svg/news-1.svg",
+      "label": "Community News",
+      "only": [
+        "groves"
+      ]
+    },
+    {
+      "id": "parentguide-chicc",
+      "href": "https://www.chinchillacc.qld.edu.au/portal-mobileapp",
+      "icon_src": "svg/guide.svg",
+      "label": "Parent Portal and Mobile App Guide",
+      "only": [
+        "chinchilla"
+      ]
+    },
+    {
+      "id": "payment-amend",
+      "href": "https://ccm-ddr.paperform.co/",
+      "icon_src": "svg/payment-7.svg",
+      "label": "Fees - Amend Payment Plan"
+    },
+    {
+      "id": "payment-nontuition-bccc",
+      "href": "https://www.bpoint.com.au/pay/BLAKESCROSSINGCHRISTIANCOLLEGE?Billercode=1752096",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "blakescrossing"
+      ]
+    },
+    {
+      "id": "payment-nontuition-bccc",
+      "href": "https://www.bpoint.com.au/pay/BLAKESCROSSINGCHRISTIANCOLLEGE?Billercode=319095",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "blakescrossing"
+      ]
+    },
+    {
+      "id": "payment-nontuition-chicc",
+      "href": "https://www.bpoint.com.au/pay/chinchillaCHRISTIANCOLLEGE?Billercode=1752393",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "chinchilla"
+      ]
+    },
+    {
+      "id": "payment-nontuition-chicc",
+      "href": "https://www.bpoint.com.au/pay/chinchillaCHRISTIANCOLLEGE?Billercode=319103",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "chinchilla"
+      ]
+    },
+    {
+      "id": "payment-nontuition-corcc",
+      "href": "https://www.bpoint.com.au/pay/CORNERSTONECHRISTIANCOLLEGELIMITED?Billercode=1947860",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "cornerstone"
+      ]
+    },
+    {
+      "id": "payment-nontuition-corcc",
+      "href": "https://www.bpoint.com.au/pay/CORNERSTONECHRISTIANCOLLEGELIMITED?Billercode=328229",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "cornerstone"
+      ]
+    },
+    {
+      "id": "payment-nontuition-dalcc",
+      "href": "https://www.bpoint.com.au/pay/dalbyCHRISTIANCOLLEGE?Billercode=1752195",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "dalby"
+      ]
+    },
+    {
+      "id": "payment-nontuition-dalcc",
+      "href": "https://www.bpoint.com.au/pay/dalbyCHRISTIANCOLLEGE?Billercode=319111",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "dalby"
+      ]
+    },
+    {
+      "id": "payment-nontuition-duncc",
+      "href": "https://www.bpoint.com.au/pay/dunsboroughchris?BILLERCODE=2220911",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "dunsborough"
+      ]
+    },
+    {
+      "id": "payment-nontuition-duncc",
+      "href": "https://www.bpoint.com.au/pay/dunsboroughchris?BILLERCODE=429688",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "dunsborough"
+      ]
+    },
+    {
+      "id": "payment-nontuition-endcc",
+      "href": "https://www.bpoint.com.au/pay/endeavourCHRISTIANCOLLEGE?Billercode=1752443",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "endeavour"
+      ]
+    },
+    {
+      "id": "payment-nontuition-endcc",
+      "href": "https://www.bpoint.com.au/pay/endeavourCHRISTIANCOLLEGE?Billercode=319129",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "endeavour"
+      ]
+    },
+    {
+      "id": "payment-nontuition-grocc",
+      "href": "https://www.bpoint.com.au/pay/grovesCHRISTIANCOLLEGE?Billercode=1752245",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "groves"
+      ]
+    },
+    {
+      "id": "payment-nontuition-grocc",
+      "href": "https://www.bpoint.com.au/pay/grovesCHRISTIANCOLLEGE?Billercode=787069",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "groves"
+      ]
+    },
+    {
+      "id": "payment-nontuition-livcc",
+      "href": "https://www.bpoint.com.au/pay/livingstonechristiancollege1?BILLERCODE=1752294",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
+      "id": "payment-nontuition-livcc",
+      "href": "https://www.bpoint.com.au/pay/livingstonechristiancollege1?BILLERCODE=787077",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "livingstone"
+      ]
+    },
+    {
+      "id": "payment-nontuition-rivcc",
+      "href": "https://www.bpoint.com.au/pay/RIVERSCHRISTIANC?BILLERCODE=2354348",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "rivers"
+      ]
+    },
+    {
+      "id": "payment-nontuition-rivcc",
+      "href": "https://www.bpoint.com.au/pay/RIVERSCHRISTIANC?BILLERCODE=479600",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "rivers"
+      ]
+    },
+    {
+      "id": "payment-nontuition-seacc",
+      "href": "https://www.bpoint.com.au/pay/seaviewchristiancollege?BILLERCODE=1752492",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "seaview"
+      ]
+    },
+    {
+      "id": "payment-nontuition-seacc",
+      "href": "https://www.bpoint.com.au/pay/seaviewchristiancollege?BILLERCODE=319137",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "seaview"
+      ]
+    },
+    {
+      "id": "payment-nontuition-stamc",
+      "href": "https://www.bpoint.com.au/pay/stainesmemorialcollege?BILLERCODE=1752344",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "staines"
+      ]
+    },
+    {
+      "id": "payment-nontuition-stamc",
+      "href": "https://www.bpoint.com.au/pay/stainesmemorialcollege?BILLERCODE=443846",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "staines"
+      ]
+    },
+    {
+      "id": "payment-nontuition-tlcc",
+      "href": "https://www.bpoint.com.au/pay/thelakeschristiancollege?BILLERCODE=1752641",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "thelakes"
+      ]
+    },
+    {
+      "id": "payment-nontuition-tlcc",
+      "href": "https://www.bpoint.com.au/pay/thelakeschristiancollege?BILLERCODE=319160",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "thelakes"
+      ]
+    },
+    {
+      "id": "payment-nontuition-warcc",
+      "href": "https://www.bpoint.com.au/pay/warwickchristiancollege?BILLERCODE=1752542",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "warwick"
+      ]
+    },
+    {
+      "id": "payment-nontuition-warcc",
+      "href": "https://www.bpoint.com.au/pay/warwickchristiancollege?BILLERCODE=319145",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "warwick"
+      ]
+    },
+    {
+      "id": "payment-nontuition-whicc",
+      "href": "https://www.bpoint.com.au/pay/whitsundaychristiancollege?BILLERCODE=1752591",
+      "icon_src": "svg/payment-5.svg",
+      "label": "Fees - Pay |Non-Tuition",
+      "only": [
+        "whitsunday"
+      ]
+    },
+    {
+      "id": "payment-nontuition-whicc",
+      "href": "https://www.bpoint.com.au/pay/whitsundaychristiancollege?BILLERCODE=319152",
+      "icon_src": "svg/payment-6.svg",
+      "label": "Fees - Pay Tuition",
+      "only": [
+        "whitsunday"
+      ]
+    },
+    {
+      "id": "school24-whicc",
+      "href": "https://www.school24.net.au/",
+      "icon_src": "webp/school24.webp",
+      "label": "School24",
+      "only": [
+        "whitsunday"
+      ]
+    },
+    {
+      "id": "schoolinterviews",
+      "href": "https://www.schoolinterviews.com.au/",
+      "icon_src": "svg/schoolinterviews.svg",
+      "label": "School Interviews",
+      "bg": "#64c802",
+      "only": [
+        "chinchilla",
+        "dalby",
+        "groves"
+      ]
+    },
+    {
+      "id": "sobs-",
+      "href": "https://sobs.com.au/pt3/parent.php?schoolid=529",
+      "icon_src": "svg/interview.svg",
+      "label": "Parent-Teacher Interview",
+      "only": [
+        "livingstone"
       ]
     }
   ],
@@ -578,6 +1090,9 @@
       "label": "College Calendar",
       "only": [
         "groves"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -602,14 +1117,39 @@
       "label": "ClickView Video Library"
     },
     {
-      "id": "clipboard",
+      "id": "clipboard-bricc",
       "href": "https://go.clipboard.app/login",
       "icon_src": "webp/clipboard.webp",
       "label": "Clipboard",
       "only": [
-        "brindabella",
-        "livingstone",
+        "brindabella"
+      ],
+      "also": [
+        "pandc"
+      ]
+    },
+    {
+      "id": "clipboard-livcc",
+      "href": "https://portal-api.clipboard.app/04455850-f969-11ef-88b2-959d42bd3e74/login",
+      "icon_src": "webp/clipboard.webp",
+      "label": "Clipboard",
+      "only": [
+        "livingstone"
+      ],
+      "also": [
+        "pandc"
+      ]
+    },
+    {
+      "id": "clipboard-stamc",
+      "href": "https://portal-api.clipboard.app/f28826f6-18f7-11f1-8302-f57f10d65487/login",
+      "icon_src": "webp/clipboard.webp",
+      "label": "Clipboard",
+      "only": [
         "staines"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -631,6 +1171,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "blakescrossing"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -640,6 +1183,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "chinchilla"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -649,6 +1195,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "cornerstone"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -658,6 +1207,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "dalby"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -667,6 +1219,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "dunsborough"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -676,6 +1231,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "endeavour"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -685,6 +1243,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "groves"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -694,6 +1255,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "livingstone"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -703,6 +1267,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "rivers"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -712,6 +1279,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "seaview"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -721,6 +1291,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "staines"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -730,6 +1303,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "thelakes"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -739,6 +1315,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "warwick"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -748,6 +1327,9 @@
       "label": "Edumate Student Information System",
       "only": [
         "whitsunday"
+      ],
+      "also": [
+        "pandc"
       ]
     },
     {
@@ -991,6 +1573,63 @@
       "groups": [
         "primary"
       ]
+    }
+  ],
+  "support": [
+    {
+      "id": "accounts-parents",
+      "href": "https://ccm-parent-uas.paperform.co/",
+      "icon_src": "svg/parents.svg",
+      "label": "Parent Accounts & Passwords"
+    },
+    {
+      "id": "accounts-students",
+      "href": "https://ccm-student-account.paperform.co/",
+      "icon_src": "svg/student-male.svg",
+      "label": "Student Accounts & Passwords"
+    },
+    {
+      "id": "support-edumate",
+      "href": "mailto:edumate-support@ccmschools.edu.au",
+      "icon_src": "svg/edumate.svg",
+      "label": "Edumate Student Information System",
+      "exclude": [
+        "brindabella",
+        "hope"
+      ]
+    },
+    {
+      "id": "support-hardware",
+      "href": "mailto:itservicedesk@ccmschools.edu.au",
+      "icon_src": "svg/ic_fluent_laptop_48_color.svg",
+      "label": "College Issued Hardware"
+    },
+    {
+      "id": "support-learnerlink",
+      "href": "https://ccmschools.app/go/learner-link-technical-support",
+      "icon_src": "svg/learner-link-trimmed.svg",
+      "label": "Learner.Link Learning Management System",
+      "bg": "#2c497e",
+      "exclude": [
+        "brindabella",
+        "hope"
+      ]
+    },
+    {
+      "id": "support-mobileapps",
+      "href": "mailto:edumate-support@ccmschools.edu.au",
+      "icon_src": "svg/smartphone-1.svg",
+      "label": "College Mobile Apps",
+      "exclude": [
+        "brindabella",
+        "hope"
+      ]
+    },
+    {
+      "id": "support-other",
+      "href": "mailto:itservicedesk@ccmschools.edu.au",
+      "icon_src": "svg/ic_fluent_chat_48_color.svg",
+      "label": "All Other Services"
     }
   ],
   "training": [

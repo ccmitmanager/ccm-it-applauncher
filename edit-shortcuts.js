@@ -39,13 +39,13 @@ function listIconFiles() {
 }
 
 // Re-serialise an entry keeping a stable key order and dropping empties.
-const KEY_ORDER = ["id", "href", "icon", "icon_src", "label", "bg", "only", "exclude", "groups"];
+const KEY_ORDER = ["id", "href", "icon", "icon_src", "label", "bg", "only", "exclude", "groups", "also"];
 function normaliseEntry(raw) {
   const out = {};
   for (const key of KEY_ORDER) {
     if (!(key in raw)) continue;
     let v = raw[key];
-    if (key === "only" || key === "exclude" || key === "groups") {
+    if (key === "only" || key === "exclude" || key === "groups" || key === "also") {
       v = Array.isArray(v) ? v.filter((x) => `${x}`.trim() !== "") : [];
       if (v.length) out[key] = v;
     } else {
@@ -185,6 +185,9 @@ const PAGE = `<!DOCTYPE html>
   #list .item .id { display:block; font-size:11px; color:#999; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   #list .item .lbl { display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   #list .item.sel .id { color:#cfe1f5; }
+  #list .item.cross { background:#f5f0e8; color:#666; }
+  #list .item.cross:hover { background:#ede5d5; }
+  #list .item.cross .src { display:block; font-size:10px; color:#aaa; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   #leftbtns { display:flex; gap:4px; padding:8px; border-top:1px solid var(--border); }
   #leftbtns button { flex:1; padding:6px 4px; border:1px solid var(--border); background:#fff; border-radius:4px; cursor:pointer; }
   #leftbtns button.narrow { flex:0 0 38px; }
@@ -292,6 +295,14 @@ const PAGE = `<!DOCTYPE html>
         </fieldset>
       </div>
 
+      <div id="alsoWrap">
+        <fieldset>
+          <legend>Also appears in</legend>
+          <p class="hint" style="margin:0 0 6px">Shortcut will be rendered in these additional sections when built.</p>
+          <div id="alsoList" class="checklist"></div>
+        </fieldset>
+      </div>
+
       <button id="apply">Apply Changes</button>
     </div>
     <div id="placeholder" class="empty">Select a shortcut on the left, or click <b>+ Add</b> to create a new one.</div>
@@ -327,6 +338,7 @@ function init(data) {
   buildChecklist("onlyList", "only");
   buildChecklist("excludeList", "exclude");
   buildGroupsChecklist();
+  buildAlsoChecklist();
 
   buildGroupsAndSections();
 }
@@ -371,22 +383,59 @@ function buildGroupsChecklist() {
   }
 }
 
+function buildAlsoChecklist() {
+  const box = $("alsoList");
+  box.innerHTML = "";
+  for (const s of DATA.sections) {
+    const lbl = document.createElement("label");
+    lbl.dataset.sectionId = s.id;
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.value = s.id;
+    cb.dataset.group = "also";
+    lbl.append(cb, document.createTextNode(" " + s.label));
+    box.append(lbl);
+  }
+}
+
+function updateAlsoState() {
+  document.querySelectorAll("#alsoList label").forEach((lbl) => {
+    const cb = lbl.querySelector("input");
+    lbl.style.display = cb.value === curSection ? "none" : "";
+  });
+}
+
 function selectSection() {
   curSection = $("section").value;
   curIndex = -1;
   renderList();
   showEditor(false);
   updateUnitState();
+  updateAlsoState();
   setStatus("");
+}
+
+function getEffectiveList() {
+  const direct = (DATA.shortcuts[curSection] || []).map((item, i) => ({
+    item, idx: i, section: curSection, isCross: false
+  }));
+  const cross = [];
+  for (const [sec, items] of Object.entries(DATA.shortcuts)) {
+    if (sec === curSection) continue;
+    items.forEach((item, i) => {
+      if ((item.also || []).includes(curSection))
+        cross.push({ item, idx: i, section: sec, isCross: true });
+    });
+  }
+  return [...direct, ...cross];
 }
 
 function renderList() {
   const list = $("list");
   list.innerHTML = "";
-  const items = DATA.shortcuts[curSection] || [];
-  items.forEach((it, i) => {
+  for (const { item: it, idx: i, section: sec, isCross } of getEffectiveList()) {
     const div = document.createElement("div");
-    div.className = "item" + (i === curIndex ? " sel" : "");
+    div.className = "item" + (!isCross && i === curIndex ? " sel" : "") + (isCross ? " cross" : "");
     if (it.id) {
       const idEl = document.createElement("span");
       idEl.className = "id";
@@ -397,9 +446,28 @@ function renderList() {
     lblEl.className = "lbl";
     lblEl.textContent = it.label || it.id || "(untitled)";
     div.append(lblEl);
-    div.onclick = () => selectItem(i);
+    if (isCross) {
+      const srcEl = document.createElement("span");
+      srcEl.className = "src";
+      const meta = DATA.sections.find((s) => s.id === sec);
+      srcEl.textContent = "↳ from: " + (meta ? meta.label : sec);
+      div.append(srcEl);
+      div.onclick = () => navigateToItem(sec, i);
+    } else {
+      div.onclick = () => selectItem(i);
+    }
     list.append(div);
-  });
+  }
+}
+
+function navigateToItem(sourceSection, itemIdx) {
+  const meta = DATA.sections.find((s) => s.id === sourceSection);
+  const tag = (meta && meta.only && meta.only[0]) || "__other__";
+  $("group").value = tag;
+  updateSections();
+  $("section").value = sourceSection;
+  selectSection();
+  selectItem(itemIdx);
 }
 
 function showEditor(show) {
@@ -409,11 +477,10 @@ function showEditor(show) {
 
 function updateUnitState() {
   const on = isSchool(curSection);
-  $("units").classList.toggle("disabled", !on);
   $("unitsHint").textContent = on
-    ? "Only / Exclude apply to school sections. Don't set both."
-    : "Only / Exclude are not used for this (non-school) section.";
-  $("groupsWrap").classList.toggle("hidden", !on || collectGroupValues().length === 0);
+    ? "Only / Exclude control which schools see this shortcut in school sections. Don't set both."
+    : "Only / Exclude are ignored in non-school sections, but apply when this shortcut appears in school sections via 'Also appears in'.";
+  $("groupsWrap").classList.toggle("hidden", collectGroupValues().length === 0);
 }
 
 function buildGroupsAndSections() {
@@ -484,6 +551,7 @@ function loadItem(it) {
   setChecks("only", it.only);
   setChecks("exclude", it.exclude);
   setChecks("groups", it.groups);
+  setChecks("also", it.also);
 }
 
 function clearForm() {
@@ -494,6 +562,7 @@ function clearForm() {
   setChecks("only", []);
   setChecks("exclude", []);
   setChecks("groups", []);
+  setChecks("also", []);
 }
 
 function selectItem(i) {
@@ -558,14 +627,15 @@ function applyChanges() {
   const bg = $("f-bg").value.trim();
   if (bg) item.bg = bg;
 
-  if (isSchool(curSection)) {
-    const only = getChecks("only");
-    const excl = getChecks("exclude");
-    const grps = getChecks("groups");
-    if (only.length) item.only = only;
-    if (excl.length) item.exclude = excl;
-    if (grps.length) item.groups = grps;
-  }
+  const also = getChecks("also");
+  if (also.length) item.also = also;
+
+  const only = getChecks("only");
+  const excl = getChecks("exclude");
+  const grps = getChecks("groups");
+  if (only.length) item.only = only;
+  if (excl.length) item.exclude = excl;
+  if (grps.length) item.groups = grps;
 
   if (!DATA.shortcuts[curSection]) DATA.shortcuts[curSection] = [];
   const list = DATA.shortcuts[curSection];

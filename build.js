@@ -21,7 +21,10 @@ const shortcutsSorted = Object.fromEntries(
 );
 fs.writeFileSync(path.join(DATA, 'shortcuts.json'), JSON.stringify(shortcutsSorted, null, 2) + '\n', 'utf8');
 const shortcuts = Object.entries(shortcutsSorted).flatMap(([grid, items]) =>
-  items.map(item => ({ ...item, grid }))
+  items.flatMap(item => [
+    { ...item, grid },
+    ...(item.also || []).map(g => ({ ...item, grid: g }))
+  ])
 );
 
 // ── Helpers ────────────────────────────────────────────────────────────────
@@ -33,7 +36,13 @@ function esc(str) {
     .replace(/>/g,  '&gt;');
 }
 
+function sectionIsSchool(gridId) {
+  const s = sections.find(sec => sec.id === gridId);
+  return s ? (s.only || []).includes('school') : false;
+}
+
 function visibleOn(shortcut, unitCode) {
+  if (!sectionIsSchool(shortcut.grid)) return true;
   if (shortcut.only)    return shortcut.only.includes(unitCode);
   if (shortcut.exclude) return !shortcut.exclude.includes(unitCode);
   return true;

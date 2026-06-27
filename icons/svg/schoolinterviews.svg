@@ -1,0 +1,12 @@
+<svg width="450" height="440" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#64c802"/>
+  <g transform="translate(-189.823 -102.08)">
+    <title>Layer 1</title>
+    <g/>
+    <path stroke="#000" fill="#fff" style="fill:#fff;stroke:#fff" d="M232.412 312.76h69.032v214.194h-69.032z"/>
+    <circle cy="174.696" cx="400.154" stroke="#000" fill="#fff" style="fill:#fff;stroke:#fff" r="65.161"/>
+    <circle cy="187.599" cx="569.186" stroke="#000" fill="#fff" style="fill:#fff;stroke:#fff" r="65.161"/>
+    <circle cy="232.76" cx="261.444" stroke="#000" fill="#fff" style="fill:#fff;stroke:#fff" r="65.161"/>
+    <path style="fill:#fff;stroke:#fff" d="m477.29 425.692-59.79 22.95 15.53-138.252zM371.121 252.115h63.225v276.774h-63.225zM487.853 392.18l44.425-121.525.557 137.968zm41.978-128.452h67.742v263.87h-67.742z"/>
+  </g>
+</svg>
