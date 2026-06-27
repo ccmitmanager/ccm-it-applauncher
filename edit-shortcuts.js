@@ -499,7 +499,9 @@ function buildGroupsAndSections() {
 
   const groupLabel = (g) =>
     g === "school" ? "Schools" :
-    g === "ccm-internal" ? "CCM Internal" :
+    g === "ccm-it" ? "CCM IT" :
+    g === "edumate" ? "Edumate" :
+    g === "stafflauncher" ? "Staff Launcher" :
     g === "__other__" ? "Other" :
     g === "__orphan__" ? "Unknown" :
     g.charAt(0).toUpperCase() + g.slice(1);

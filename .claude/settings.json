@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(node -e \"require\\('./build.js'\\)\")",
-      "WebSearch"
+      "WebSearch",
+      "Bash(node \"C:/Users/joshu/AppData/Local/Temp/claude/d--Git-StaticSites-ccm-it-applauncher/c0af0592-6b31-4031-a5bb-18819fd6a89c/scratchpad/appendix.js\")"
     ]
   }
 }
