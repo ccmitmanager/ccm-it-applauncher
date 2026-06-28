@@ -246,7 +246,7 @@ All changes are made in `_data/`, then rebuilt and committed.
 
 - **Add a business unit:** append an object to `units.json` with a new unique `code`. Run the build — a `/<code>/` page is created automatically. Set appropriate `tags` so the right sections appear. Set `logoUrl` to make the logo a link to the school's public website.
 - **Add a section:** add an entry to `sections.json` (unique `id`, a `label`, optional `only`/`exclude`), then add a matching key in `shortcuts.json` holding its shortcuts. A section with no visible shortcuts won't render.
-- **Add a shortcut:** add an entry to the relevant section's array in `shortcuts.json`. Use `icon` for a text tile or `icon_src` for an image, and optionally scope it with `only`/`exclude`. Put a `\|` in the `label` to force a line break.
+- **Add a shortcut:** add an entry to the relevant section's array in `shortcuts.json`. Use `icon` for a text tile or `icon_src` for an image, and optionally scope it with `only`/`exclude`. Put a plain `|` in the `label` to force a line break — e.g. `"label": "Reading|Eggs"` renders as two lines (no backslash; the `\|` shown in the field table above is only markdown table escaping).
 - **Show a shortcut in more than one section:** add an `also` array listing the extra section ids — see **Linking a shortcut to multiple sections**.
 - **Set up a primary/secondary split:** add `sectionSplits` to the unit in `units.json`, then tag individual shortcuts in that section with `groups` as needed. Untagged shortcuts appear in all sub-tabs automatically.
 
