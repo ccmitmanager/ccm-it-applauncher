@@ -39,7 +39,7 @@ function listIconFiles() {
 }
 
 // Re-serialise an entry keeping a stable key order and dropping empties.
-const KEY_ORDER = ["id", "href", "icon", "icon_src", "label", "bg", "only", "exclude", "groups", "also"];
+const KEY_ORDER = ["id", "href", "icon", "icon_src", "label", "bg", "order", "only", "exclude", "groups", "also"];
 function normaliseEntry(raw) {
   const out = {};
   for (const key of KEY_ORDER) {
@@ -48,6 +48,9 @@ function normaliseEntry(raw) {
     if (key === "only" || key === "exclude" || key === "groups" || key === "also") {
       v = Array.isArray(v) ? v.filter((x) => `${x}`.trim() !== "") : [];
       if (v.length) out[key] = v;
+    } else if (key === "order") {
+      const n = parseInt(v, 10);
+      if (!isNaN(n) && n >= 0 && n <= 99) out[key] = n;
     } else {
       v = `${v ?? ""}`.trim();
       if (v !== "") out[key] = v;
@@ -205,6 +208,8 @@ const PAGE = `<!DOCTYPE html>
   #iconPreview { height:42px; margin-top:8px; display:flex; align-items:center; gap:10px; }
   #iconPreview img { max-height:40px; max-width:120px; border:1px solid var(--border); border-radius:4px; background:#fff; padding:2px; }
   .iconchip { display:inline-flex; align-items:center; justify-content:center; min-width:40px; height:40px; padding:0 8px; background:#22325d; color:#fff; border-radius:6px; font-weight:600; }
+  .order-badge { display:inline-block; background:var(--accent); color:#fff; border-radius:3px; font-size:10px; padding:1px 5px; margin-left:5px; vertical-align:middle; font-weight:600; }
+  #list .item.sel .order-badge { background:rgba(255,255,255,.3); }
   #apply { background:var(--accent); color:#fff; border:none; padding:9px 22px; border-radius:4px; font-size:14px; cursor:pointer; }
   #status { padding:6px 16px; font-size:13px; color:#555; background:#e9e9e9; border-top:1px solid var(--border); min-height:28px; }
   .empty { color:#999; padding:40px 0; text-align:center; }
@@ -273,6 +278,10 @@ const PAGE = `<!DOCTYPE html>
       <div class="row">
         <label class="fld" for="f-bg">Background (optional hex / CSS colour)</label>
         <input type="text" id="f-bg" style="max-width:220px" placeholder="#f4f4f4">
+      </div>
+      <div class="row">
+        <label class="fld" for="f-order">Sort order (optional 0–999, lower appears first before alphabetical)</label>
+        <input type="number" id="f-order" style="max-width:100px" min="0" max="999" placeholder="—">
       </div>
 
       <div id="units" class="units">
@@ -445,6 +454,12 @@ function renderList() {
     const lblEl = document.createElement("span");
     lblEl.className = "lbl";
     lblEl.textContent = it.label || it.id || "(untitled)";
+    if (typeof it.order === "number") {
+      const badge = document.createElement("span");
+      badge.className = "order-badge";
+      badge.textContent = it.order;
+      lblEl.append(badge);
+    }
     div.append(lblEl);
     if (isCross) {
       const srcEl = document.createElement("span");
@@ -545,6 +560,7 @@ function loadItem(it) {
   $("f-label").value = it.label || "";
   $("f-href").value = it.href || "";
   $("f-bg").value = it.bg || "";
+  $("f-order").value = typeof it.order === "number" ? String(it.order) : "";
   const useSrc = "icon_src" in it;
   document.querySelector('input[name="icontype"][value="' + (useSrc ? "icon_src" : "icon") + '"]').checked = true;
   $("f-icon").value = useSrc ? "" : (it.icon || "");
@@ -557,7 +573,7 @@ function loadItem(it) {
 }
 
 function clearForm() {
-  $("f-id").value = $("f-label").value = $("f-href").value = $("f-bg").value = "";
+  $("f-id").value = $("f-label").value = $("f-href").value = $("f-bg").value = $("f-order").value = "";
   $("f-icon").value = $("f-iconsrc").value = "";
   document.querySelector('input[name="icontype"][value="icon"]').checked = true;
   syncIconType();
@@ -628,6 +644,11 @@ function applyChanges() {
   if (label) item.label = label;
   const bg = $("f-bg").value.trim();
   if (bg) item.bg = bg;
+  const orderRaw = $("f-order").value.trim();
+  if (orderRaw !== "") {
+    const n = parseInt(orderRaw, 10);
+    if (!isNaN(n) && n >= 0 && n <= 999) item.order = n;
+  }
 
   const also = getChecks("also");
   if (also.length) item.also = also;
@@ -702,7 +723,7 @@ $("f-icon").oninput = renderPreview;
 $("f-iconsrc").oninput = renderPreview;
 
 // Enter in a text field applies changes
-for (const id of ["f-id", "f-label", "f-href", "f-bg", "f-icon", "f-iconsrc"]) {
+for (const id of ["f-id", "f-label", "f-href", "f-bg", "f-order", "f-icon", "f-iconsrc"]) {
   $(id).addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); applyChanges(); } });
 }
 

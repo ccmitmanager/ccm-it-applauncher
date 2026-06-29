@@ -151,6 +151,12 @@
   ],
   "edumate": [
     {
+      "id": "demo1",
+      "href": "https://learner.link",
+      "icon": "Staff",
+      "label": "Demo Link"
+    },
+    {
       "id": "edumate-bccc",
       "href": "https://blakescrossing.edumate.net.au/",
       "icon_src": "webp/logos/bccc.webp",
@@ -270,13 +276,15 @@
       "id": "sharepoint",
       "href": "https://ccmschools.sharepoint.com/_layouts/15/sharepoint.aspx/discover",
       "icon_src": "svg/sharepoint.svg",
-      "label": "SharePoint Documents & News"
+      "label": "SharePoint Documents & News",
+      "order": 1
     },
     {
       "id": "thesource",
       "href": "https://ccmschools.sharepoint.com/sites/thesource",
       "icon_src": "svg/thesource.svg",
-      "label": "The Source"
+      "label": "The Source",
+      "order": 0
     }
   ],
   "ms-portals": [

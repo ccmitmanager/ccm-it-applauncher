@@ -133,11 +133,9 @@ const SHARED_NAV = `
         </div>
       </div>`;
 
-// ── Inline JS (identical on every page) ───────────────────────────────────
-const PAGE_SCRIPT = `  <script>
-    (function () {
-      'use strict';
-
+// ── Inline JS ─────────────────────────────────────────────────────────────
+function buildScript(showTopbar) {
+  const topbarJs = !showTopbar ? '' : `
       const dds          = document.querySelectorAll('.dd');
       const topbar       = document.querySelector('.topbar');
       const hamburgerBtn = document.querySelector('.hamburger-btn');
@@ -185,7 +183,12 @@ const PAGE_SCRIPT = `  <script>
       });
 
       topbarNav.addEventListener('click', e => e.stopPropagation());
+`;
 
+  return `  <script>
+    (function () {
+      'use strict';
+${topbarJs}
       const fBtns = document.querySelectorAll('.f-btn');
       const grids = document.querySelectorAll('.grid');
 
@@ -220,11 +223,17 @@ const PAGE_SCRIPT = `  <script>
         img.src = 'data:image/svg+xml,' + encodeURIComponent(svg);
       });
 
+      const attrDialog = document.getElementById('attr-dialog');
+      document.querySelector('.attr-close').addEventListener('click', () => attrDialog.close());
+      attrDialog.addEventListener('click', e => { if (e.target === attrDialog) attrDialog.close(); });
+
     })();
   </script>`;
+}
 
 // ── Page builder ───────────────────────────────────────────────────────────
 function buildPage(unit) {
+  const showTopbar = unit.showTopbar !== false;
   const unitShortcuts = shortcuts.filter(sc => visibleOn(sc, unit.code));
   const splits = unit.sectionSplits || {};
 
@@ -259,7 +268,14 @@ function buildPage(unit) {
   const grids = effectiveSections.map((s, i) => {
     const items = s.items
       .slice()
-      .sort((a, b) => a.label.localeCompare(b.label))
+      .sort((a, b) => {
+        const aHasOrder = a.order !== undefined;
+        const bHasOrder = b.order !== undefined;
+        if (aHasOrder && bHasOrder) return a.order - b.order;
+        if (aHasOrder) return -1;
+        if (bHasOrder) return 1;
+        return a.label.localeCompare(b.label);
+      })
       .map(sc => renderItem(sc, unit.accent))
       .join('');
     return (
@@ -284,12 +300,26 @@ function buildPage(unit) {
   <link href="https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style/styles.css">
-  <style>:root { --accent: ${esc('#22325d')}; }</style>
+  <style>
+    :root { --accent: ${esc('#22325d')}; }
+    dialog.attr-dialog { border: none; border-radius: 8px; padding: 0; max-width: 480px; width: 90%; box-shadow: 0 8px 32px rgba(0,0,0,.25); position: fixed; bottom: 1.5rem; right: 1.5rem; top: auto; left: auto; margin: 0; }
+    dialog.attr-dialog::backdrop { background: rgba(0,0,0,.45); }
+    .attr-dialog-head { background: #22325d; color: #fff; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; border-radius: 8px 8px 0 0; }
+    .attr-dialog-head h2 { margin: 0; font-size: 16px; font-weight: 600; }
+    .attr-close { background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; line-height: 1; padding: 0 4px; }
+    .attr-close:hover { opacity: .75; }
+    .attr-dialog-body { padding: 18px 20px; }
+    .attr-dialog-body p { margin: 0 0 8px; }
+    .attr-dialog-body ul { margin: 0; padding-left: 20px; }
+    .attr-dialog-body li { margin-bottom: 6px; }
+    .attr-dialog-body a { color: #0078d4; }
+    .attr-btn { background: none; border: none; color: inherit; text-decoration: underline; cursor: pointer; font: inherit; padding: 0; }
+  </style>
 </head>
 
 <body>
 
-  <nav class="topbar" aria-label="Main navigation">
+${showTopbar ? `  <nav class="topbar" aria-label="Main navigation">
 
     <button class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false"
       aria-controls="topbar-nav">&#9776; Menu</button>
@@ -304,7 +334,7 @@ function buildPage(unit) {
 
   </nav>
 
-  <div class="logo-wrap">
+` : ''}  <div class="logo-wrap">
     ${unit.logoUrl
       ? `<a href="${esc(unit.logoUrl)}" target="_blank" rel="noopener"><img src="${esc(root + unit.logo.replace(/^\//, ''))}" alt="${esc(unit.name)}"></a>`
       : `<img src="${esc(root + unit.logo.replace(/^\//, ''))}" alt="${esc(unit.name)}">`}
@@ -319,10 +349,28 @@ ${grids}
   </main>
 
   <footer>
-    <p>A ministry of <a href="https://www.ccmschools.edu.au">Christian Community Ministries</a></p>
+    <p>A ministry of <a href="https://www.ccmschools.edu.au">Christian Community Ministries</a> &nbsp;&middot;&nbsp; <button class="attr-btn" onclick="document.getElementById('attr-dialog').showModal()">Attributions</button></p>
   </footer>
 
-${PAGE_SCRIPT}
+  <dialog id="attr-dialog" class="attr-dialog" aria-labelledby="attr-dialog-title">
+    <div class="attr-dialog-head">
+      <h2 id="attr-dialog-title">Attributions</h2>
+      <button class="attr-close" aria-label="Close">&#x2715;</button>
+    </div>
+    <div class="attr-dialog-body">
+      <p>This page makes use of resources from the following sources:</p>
+      <ul>
+        <li><a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a></li>
+        <li><a href="https://www.vecteezy.com/free-vector" target="_blank" rel="noopener">Vecteezy</a></li>
+        <li><a href="https://www.svgrepo.com" target="_blank" rel="noopener">SVG Repo</a></li>
+        <li><a href="https://www.flaticon.com" target="_blank" rel="noopener">Flaticon</a></li>
+        <li><a href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/" target="_blank" rel="noopener">SVGBackgrounds.com</a></li>
+        <li><a href="https://opensvg.dev/icons" target="_blank" rel="noopener">OpenSvg</a></li>
+      </ul>
+    </div>
+  </dialog>
+
+${buildScript(showTopbar)}
 
 </body>
 

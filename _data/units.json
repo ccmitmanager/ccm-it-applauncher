@@ -7,6 +7,7 @@
     "logo": "/logos/bccc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.blakescrossing.sa.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -19,6 +20,7 @@
     "logo": "/logos/bricc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.bcc.act.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -31,6 +33,7 @@
     "logo": "/logos/chicc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.chinchillacc.qld.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -43,6 +46,7 @@
     "logo": "/logos/corcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.cornerstone.wa.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -55,6 +59,7 @@
     "logo": "/logos/dalcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.dalbycc.qld.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -67,6 +72,7 @@
     "logo": "/logos/duncc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.dcc.wa.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -79,6 +85,7 @@
     "logo": "/logos/endcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.endeavour.qld.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -91,6 +98,7 @@
     "logo": "/logos/grocc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://groves.christian.college/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -103,6 +111,7 @@
     "logo": "/logos/hopcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.hopecc.sa.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -115,6 +124,7 @@
     "logo": "/logos/livcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.livingstone.qld.edu.au/",
+    "showTopbar": false,
     "sectionSplits": {
       "students": [
         {
@@ -145,6 +155,7 @@
     "logo": "/logos/rivcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://rivers.christian.college/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -157,6 +168,7 @@
     "logo": "/logos/seacc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://seaview.christian.college/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -169,6 +181,7 @@
     "logo": "/logos/stamc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://staines.qld.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -181,6 +194,7 @@
     "logo": "/logos/tlcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.thelakescc.nsw.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -193,6 +207,7 @@
     "logo": "/logos/warcc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.warwickcc.qld.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -205,6 +220,7 @@
     "logo": "/logos/whicc.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.whitsunday.qld.edu.au/",
+    "showTopbar": false,
     "tags": [
       "school"
     ]
@@ -217,6 +233,7 @@
     "logo": "/logos/ccm-logo.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.ccmschools.edu.au/",
+    "showTopbar": true,
     "tags": [
       "ccm-it"
     ]
@@ -229,6 +246,7 @@
     "logo": "/logos/edumate.png",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.ccmschools.edu.au/",
+    "showTopbar": false,
     "tags": [
       "edumate"
     ]
@@ -241,6 +259,7 @@
     "logo": "/logos/ccm-logo.webp",
     "collegeAppsUrl": "https://ccmschools.app/go/",
     "logoUrl": "https://www.ccmschools.edu.au/",
+    "showTopbar": true,
     "tags": [
       "stafflauncher"
     ]

@@ -14,48 +14,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style/styles.css">
-  <style>:root { --accent: #22325d; }</style>
+  <style>
+    :root { --accent: #22325d; }
+    dialog.attr-dialog { border: none; border-radius: 8px; padding: 0; max-width: 480px; width: 90%; box-shadow: 0 8px 32px rgba(0,0,0,.25); position: fixed; bottom: 1.5rem; right: 1.5rem; top: auto; left: auto; margin: 0; }
+    dialog.attr-dialog::backdrop { background: rgba(0,0,0,.45); }
+    .attr-dialog-head { background: #22325d; color: #fff; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; border-radius: 8px 8px 0 0; }
+    .attr-dialog-head h2 { margin: 0; font-size: 16px; font-weight: 600; }
+    .attr-close { background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; line-height: 1; padding: 0 4px; }
+    .attr-close:hover { opacity: .75; }
+    .attr-dialog-body { padding: 18px 20px; }
+    .attr-dialog-body p { margin: 0 0 8px; }
+    .attr-dialog-body ul { margin: 0; padding-left: 20px; }
+    .attr-dialog-body li { margin-bottom: 6px; }
+    .attr-dialog-body a { color: #0078d4; }
+    .attr-btn { background: none; border: none; color: inherit; text-decoration: underline; cursor: pointer; font: inherit; padding: 0; }
+  </style>
 </head>
 
 <body>
-
-  <nav class="topbar" aria-label="Main navigation">
-
-    <button class="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false"
-      aria-controls="topbar-nav">&#9776; Menu</button>
-
-    <div class="topbar-nav" id="topbar-nav">
-
-      <a href="https://ccmschools.app/go/" class="tb-link">College Apps</a>
-
-      <a href="/groves/" class="tb-link active">Groves Staff Apps</a>
-      
-      <div class="dd">
-        <button class="dd-btn" aria-haspopup="true" aria-expanded="false">
-          System Administration <span class="dd-caret"></span>
-        </button>
-        <div class="dd-menu">
-          <a href="https://ccmschools.app/go/testenv/">Test Environments</a>
-          <a href="https://admin.parentidpassport.com/PIPSPlus-Admin/">PIPSPlus Admin</a>
-          <a href="https://ccm.busminder.com.au/admin/">BusMinder Administration</a>
-          <a href="https://cmd.ms">Microsoft Admin Portals</a>
-        </div>
-      </div>
-
-      <div class="dd">
-        <button class="dd-btn" aria-haspopup="true" aria-expanded="false">
-          The Source <span class="dd-caret"></span>
-        </button>
-        <div class="dd-menu">
-          <a href="https://ccmschools.sharepoint.com/sites/ccm-policy">Policy &amp; Procedure Portal</a>
-          <a href="https://ccmschools.sharepoint.com/sites/TeachingLearning">Teaching &amp; Learning Portal</a>
-          <a href="https://ccmschools.sharepoint.com/sites/ccm-hrp">HR &amp; Payroll Portal</a>
-          <a href="https://ccmschools.sharepoint.com/sites/ccm-policy/leaders/">School Leaders Guide</a>
-        </div>
-      </div>
-    </div>
-
-  </nav>
 
   <div class="logo-wrap">
     <a href="https://groves.christian.college/" target="_blank" rel="noopener"><img src="/logos/grocc.webp" alt="Groves Christian College"></a>
@@ -203,60 +179,30 @@
   </main>
 
   <footer>
-    <p>A ministry of <a href="https://www.ccmschools.edu.au">Christian Community Ministries</a></p>
+    <p>A ministry of <a href="https://www.ccmschools.edu.au">Christian Community Ministries</a> &nbsp;&middot;&nbsp; <button class="attr-btn" onclick="document.getElementById('attr-dialog').showModal()">Attributions</button></p>
   </footer>
+
+  <dialog id="attr-dialog" class="attr-dialog" aria-labelledby="attr-dialog-title">
+    <div class="attr-dialog-head">
+      <h2 id="attr-dialog-title">Attributions</h2>
+      <button class="attr-close" aria-label="Close">&#x2715;</button>
+    </div>
+    <div class="attr-dialog-body">
+      <p>This page makes use of resources from the following sources:</p>
+      <ul>
+        <li><a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a></li>
+        <li><a href="https://www.vecteezy.com/free-vector" target="_blank" rel="noopener">Vecteezy</a></li>
+        <li><a href="https://www.svgrepo.com" target="_blank" rel="noopener">SVG Repo</a></li>
+        <li><a href="https://www.flaticon.com" target="_blank" rel="noopener">Flaticon</a></li>
+        <li><a href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/" target="_blank" rel="noopener">SVGBackgrounds.com</a></li>
+        <li><a href="https://opensvg.dev/icons" target="_blank" rel="noopener">OpenSvg</a></li>
+      </ul>
+    </div>
+  </dialog>
 
   <script>
     (function () {
       'use strict';
-
-      const dds          = document.querySelectorAll('.dd');
-      const topbar       = document.querySelector('.topbar');
-      const hamburgerBtn = document.querySelector('.hamburger-btn');
-      const topbarNav    = document.getElementById('topbar-nav');
-
-      function closeAllNav() {
-        dds.forEach(d => {
-          d.classList.remove('open');
-          d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
-        });
-        topbar.classList.remove('nav-open');
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-      }
-
-      dds.forEach(dd => {
-        const btn = dd.querySelector('.dd-btn');
-        btn.addEventListener('click', e => {
-          e.stopPropagation();
-          const opening = !dd.classList.contains('open');
-          dds.forEach(d => {
-            d.classList.remove('open');
-            d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
-          });
-          if (opening) {
-            dd.classList.add('open');
-            btn.setAttribute('aria-expanded', 'true');
-          }
-        });
-      });
-
-      document.addEventListener('click', closeAllNav);
-      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllNav(); });
-
-      hamburgerBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        const opening = !topbar.classList.contains('nav-open');
-        topbar.classList.toggle('nav-open', opening);
-        hamburgerBtn.setAttribute('aria-expanded', opening ? 'true' : 'false');
-        if (!opening) {
-          dds.forEach(d => {
-            d.classList.remove('open');
-            d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
-          });
-        }
-      });
-
-      topbarNav.addEventListener('click', e => e.stopPropagation());
 
       const fBtns = document.querySelectorAll('.f-btn');
       const grids = document.querySelectorAll('.grid');
@@ -291,6 +237,10 @@
           "</text></svg>";
         img.src = 'data:image/svg+xml,' + encodeURIComponent(svg);
       });
+
+      const attrDialog = document.getElementById('attr-dialog');
+      document.querySelector('.attr-close').addEventListener('click', () => attrDialog.close());
+      attrDialog.addEventListener('click', e => { if (e.target === attrDialog) attrDialog.close(); });
 
     })();
   </script>
